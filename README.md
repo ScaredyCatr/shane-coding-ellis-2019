@@ -4,4 +4,4 @@ coding class website for me
 
 
 
-https://scaredycatr.github.io/shane-coding-ellis-2019/
+https://scaredycatr.github.io/shane-coding-ellis-2019/public

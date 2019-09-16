@@ -61,6 +61,22 @@
 
 
 
+<input type=text id="myText05" value="dog"><br>
+
+<input type=button  value=button onclick="
+{
+    if (document.getElementById('myText05').value = 'dog'){
+        document.getElementById('myDiv05').innerHTML +=
+              'animal<br>'
+    } else{
+        document.getElementById('myDiv05').innerHTML +=
+              'not an animal<br>'
+}
+}">
+
+<div id="myDiv05"></div><br>
+
+
 
 
 

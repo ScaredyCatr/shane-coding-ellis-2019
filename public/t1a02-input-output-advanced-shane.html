@@ -1,3 +1,17 @@
+<script>
+
+myArray = new Array()
+myArray[0] = 'dog'
+myArray[1] = 'cat'
+myArray[2] = 'bear'
+myArray[3] = 'bird'
+myArray[4] = 'fish'
+myArray[5] = 'bug'
+
+
+</script>
+
+
 <input type=text id="myText01" value="5"><br>
 
 <input type=button  value=run onclick="{
@@ -65,7 +79,7 @@
 
 <input type=button  value=button onclick="
 {
-    if (document.getElementById('myText05').value = 'dog'){
+    if (myArray.indexOf(1)){
         document.getElementById('myDiv05').innerHTML +=
               'animal<br>'
     } else{

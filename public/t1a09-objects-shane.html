@@ -1,12 +1,13 @@
 
-Body Temp: <input type=text id="myText01" value="5">degrees Celcius<br>
+Name: <input type=text id="myText01" value="Josh"><br>
 
 Age: <input type=text id="myText02" value="20"><br>
 
 <input type=button  value="Input/Output" onclick="{
-     let myPerson = {'age':'50', 'name':'Fred'};
 
-    let myTemp = document.getElementById('myText01').value
+alert()
+}
+    let myName = document.getElementById('myText01').value
 
     let myPerson.age = document.getElementById('myText02').value
 
@@ -14,9 +15,6 @@ Age: <input type=text id="myText02" value="20"><br>
 
         JSON.stringify(myPerson, null, 3)  +
          ' myPerson.age =  ' + myPerson.age
-                  let myIf = 'cool'
-                  if ( parseInt(myPerson.age) >= 20) {myIf = 'You are a adult'}
-                  else {myIf = 'You are a child'}
 
                   document.getElementById('myDiv01').innerHTML = myIf
                   document.getElementById('myTextArea01').value = myPrintout

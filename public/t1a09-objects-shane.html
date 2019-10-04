@@ -1,14 +1,16 @@
 
-Name: <input type=text id="myText01" value="Josh"><br>
+Name: <input type=text id="myText01" value="James"><br>
 
 Age: <input type=text id="myText02" value="20"><br>
 
 <input type=button  value="Input/Output" onclick="{
+     document.getElementById('myText02').innerHTML = ``
 
- alert(h)
 
+      if (document.getElementById('myText02').value <= 19){
+        document.getElementById('myOut').innerHTML +=
+              'you are a teen<br>'
 
-}>
+}">
 
-<div id="myDiv01">...</div><br>
-<textarea id="myTextArea01" rows=10 cols=80 noWRAP>...</textarea>
+<div id="myOut">...</div>

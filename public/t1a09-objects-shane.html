@@ -16,7 +16,7 @@ Body Temp: <input type=text id="myText01" value="36.1">degrees Celcius<br>
     + ' myPerson.age :  ' + myPerson.age
     let myIf = 'cool'
     if ( parseInt(myPerson.age) >= 20) {myIf = 'You are a adult'}
-
+    else ( parseInt(myPerson.age) <= 20) {myIf = 'You are a child'}
     document.getElementById('myDiv01').innerHTML = myIf
     document.getElementById('myTextArea01').value = myPrintout
 

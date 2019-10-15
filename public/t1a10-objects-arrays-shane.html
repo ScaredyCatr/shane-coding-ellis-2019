@@ -6,19 +6,19 @@ Put objects inside of an array,
 Place an array inside of an object<br><br>
 
 <input type=button value="Show Object Array" onclick="{
-    let myObjectArray = { 'age' :'22', 'name' :'Shane', 'myThings' :['animal', 'bunny', 'tree'] };
+    let myObjectArray = { 'age' :'22', 'name' :'Shane',};
 
     let myPrintout = 'myObjectArray object :'+JSON.stringify(myObjectArray,null,3)
         document.getElementById('myTextArea01').value = myPrintout
-        document.getElementById('myDiv01').innerHTML = 'myObjectArray' +  myObjectArray.myThings[0]
+        document.getElementById('myDiv01').innerHTML = 'myObjectArray'
 }">
 
 <input type=button value="Show Array Object" onclick="{
-    let myArrayObject = {'age' : '22', 'name' : 'Shane'};
+    let myArrayObject = {'age' : '22', 'name' : 'Shane', 'myThings' :['animal', 'bunny', 'tree'] };
 
     let myPrintout='myArrayObject = '+JSON.stringify(myArrayObject,null,3)
     document.getElementById('myTextArea01').value = myPrintout
-    document.getElementById('myDiv01').innerHTML = 'myArrayObject'
+    document.getElementById('myDiv01').innerHTML = 'myArrayObject' +   myArrayObject.myThings[0]
 }">
 
 <div id="myDiv01">...</div><br>

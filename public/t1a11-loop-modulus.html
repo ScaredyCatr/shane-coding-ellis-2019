@@ -17,8 +17,13 @@ Enter any number of loops <input type=text id="myText01" value="25"><br><br>
               myMessage += ' Divisible by 5 '
           }
 
+         if (myLoop % 2 == 0)  {
+             myFontColour = 'blue'
+             myMessage += ' Divisible by 2 '
+          }
+
           myTemp += '<font color='+myFontColour+'> Loop # ' + myLoop + '</font>'+ myMessage +'<br>'
-        
+
       }
 
       document.getElementById('myDiv01').innerHTML = myTemp

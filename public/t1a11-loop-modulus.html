@@ -22,6 +22,11 @@ Enter any number of loops <input type=text id="myText01" value="25"><br><br>
              myMessage += ' Divisible by 2 '
           }
 
+         if ((myLoop % 2 == 0) && (myLoop % 5 == 0))  {
+             myFontColour = 'red'
+             myMessage == ' Divisible by 5 and 2'
+          }
+
           myTemp += '<font color='+myFontColour+'> Loop # ' + myLoop + '</font>'+ myMessage +'<br>'
 
       }

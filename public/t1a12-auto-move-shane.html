@@ -7,4 +7,14 @@ make all directions(in a taable?) replace shane with an image<br>
 
 <div id="myDiv01" style="position:absolute; left:200; top:10; " >Shane</div>
 
-<input type=button
+<input type=button value="Go Right Auto" onclick="{
+    
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+
+    document.getElementById('myDiv01').style.left =
+    parseInt(document.getElementById('myDiv01').style.left) + 10
+
+    } ,200)
+}">
+    

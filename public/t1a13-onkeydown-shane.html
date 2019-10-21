@@ -2,8 +2,8 @@
    let myInterval
 
    function myIsOnScreen(){
-       if (parseInt(document.getElementById('myDiv01').style.left) > 700) {
-         document.getElementById('myDiv01').style.left = '650px'
+       if (parseInt(document.getElementById('myDiv01').style.left) > 400) {
+         document.getElementById('myDiv01').style.left = '397px'
 
              }
    }
@@ -13,7 +13,7 @@
 <body onkeydown="{
 
       let myKey = event.key
-      let myKey = String.toLowerCase(event.key)
+     // let myKey = String.toLowerCase(event.key)
 
     if (myKey == 'd') {
         clearInterval(myInterval)
@@ -24,6 +24,8 @@
         myIsOnScreen()
 
     } ,20)
+
+    }
 
 }">
 

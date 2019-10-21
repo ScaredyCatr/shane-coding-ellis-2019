@@ -25,7 +25,7 @@
 
     } ,20)
 
-    }
+    }else {
 
     if (myKey == 'a') {
         clearInterval(myInterval)
@@ -39,6 +39,19 @@
 
     }
 
+    }else {
+
+    if (myKey == 'w') {
+        clearInterval(myInterval)
+        myinterval = setInterval(function(){
+
+        document.getElementById('myDiv01').style.top =
+        parseInt(document.getElementById('myDiv01').style.top) + 3
+        myIsOnScreen()
+
+        } ,20)
+
+    }
 
 }">
 

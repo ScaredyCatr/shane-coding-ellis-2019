@@ -6,11 +6,8 @@
          document.getElementById('myDiv01').style.left = '650px'
 
              }
-  function myIsOnScreen2(){
-       if (parseInt(document.getElementById('myDiv01').style.left) > 700) {
-         document.getElementById('myDiv01').style.left = '100px'
-     }
-
+   }
+   
 </script>
 
 <body onkeydown="{
@@ -25,16 +22,9 @@
         document.getElementById('myDiv01').style.left =
         parseInt(document.getElementById('myDiv01').style.left) + 10
         myIsOnScreen()
-        }
 
-        if (myKey == 'a') {
-        clearInterval(myInterval)
-        myinterval = setInterval(function(){
+    }
 
-        document.getElementById('myDiv01').style.left =
-        parseInt(document.getElementById('myDiv01').style.left) + -10
-        myIsOnScreen2()
-        } ,20)
     }
 
 }">

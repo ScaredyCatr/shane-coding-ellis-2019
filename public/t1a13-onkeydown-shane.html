@@ -13,7 +13,7 @@
 <body onkeydown="{
 
       let myKey = event.key
-     // let myKey = String.toLowerCase(event.key)
+
 
     if (myKey == 'd') {
         clearInterval(myInterval)
@@ -26,6 +26,19 @@
     } ,20)
 
     }
+
+    if (myKey == 'a') {
+        clearInterval(myInterval)
+        myinterval = setInterval(function(){
+
+        document.getElementById('myDiv01').style.left =
+        parseInt(document.getElementById('myDiv01').style.left) - 3
+        myIsOnScreen()
+
+        } ,-20)
+
+    }
+
 
 }">
 

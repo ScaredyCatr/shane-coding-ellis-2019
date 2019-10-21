@@ -13,18 +13,18 @@
 <body onkeydown="{
 
       let myKey = event.key
-   // let myKey = String.toLowerCase(event.key)
+      let myKey = String.toLowerCase(event.key)
 
     if (myKey == 'd') {
         clearInterval(myInterval)
         myinterval = setInterval(function(){
 
         document.getElementById('myDiv01').style.left =
-        parseInt(document.getElementById('myDiv01').style.left) + 100
+        parseInt(document.getElementById('myDiv01').style.left) + 3
         myIsOnScreen()
 
-    }
-    
+    } ,20)
+
 }">
 
 <h1 align=center>t1a13-onkeydown-shane</h1>

@@ -22,10 +22,13 @@
         document.getElementById('myDiv01').style.left =
         parseInt(document.getElementById('myDiv01').style.left) + 3
         myIsOnScreen()
+    }, 20)
 
-    } ,20)
+}">
 
-    }else {
+</body>
+
+<body onkeydown="{
 
     if (myKey == 'a') {
         clearInterval(myInterval)
@@ -33,25 +36,7 @@
 
         document.getElementById('myDiv01').style.left =
         parseInt(document.getElementById('myDiv01').style.left) - 3
-        myIsOnScreen()
-
-        } ,-20)
-
-    }
-
-    }else {
-
-    if (myKey == 'w') {
-        clearInterval(myInterval)
-        myinterval = setInterval(function(){
-
-        document.getElementById('myDiv01').style.top =
-        parseInt(document.getElementById('myDiv01').style.top) + 3
-        myIsOnScreen()
-
-        } ,20)
-
-    }
+        }, 20)
 
 }">
 

@@ -20,14 +20,71 @@ function myHitOther(my1,my2){
 
 </script>
 
-<img src='maxresdefault.jpg' id="myImg01" style="position:absolute; left:200; top:200; width:100; height:100; " />
-<img src='hqdefault (1).jpg' id="myImg02" style="position:absolute; left:400; top:200; width:100; height:100; "/>
+<img src="https://media.tenor.com/images/97393c7de926cdbfd8ceb49b43364d08/tenor.gidf" id="myImg01" style="position:absolute; left:200; top:200; width:100; height:100; ">
+<img src="https://media.tenor.com/images/498558d092bd097cf486cc009fa93f05/tenor.gif" id="myImg02" style="position:absolute; left:400; top:200; width:100; height:100; ">
 
-
-<input type=button value="go Right"  onclick="{
+<body onkeydown="{
+if (event.key == 'ArrowRight'){
    document.getElementById('myImg01').style.left =
       parseInt(document.getElementById('myImg01').style.left) + 10
    if ( myHitOther('myImg01','myImg02') ){
       document.getElementById('myImg01').style.left = '20px'
    }
+}
+
+if (event.key == 'ArrowUp'){
+   document.getElementById('myImg01').style.top =
+      parseInt(document.getElementById('myImg01').style.top) - 10
+   if ( myHitOther('myImg01','myImg02') ){
+      document.getElementById('myImg01').style.top = '20px'
+   }
+}
+
+if (event.key == 'ArrowDown'){
+   document.getElementById('myImg01').style.top =
+      parseInt(document.getElementById('myImg01').style.top) + 10
+   if ( myHitOther('myImg01','myImg02') ){
+      document.getElementById('myImg01').style.top = '20px'
+   }
+}
+
+if (event.key == 'ArrowLeft'){
+   document.getElementById('myImg01').style.left =
+      parseInt(document.getElementById('myImg01').style.left) - 10
+   if ( myHitOther('myImg01','myImg02') ){
+      document.getElementById('myImg01').style.left = '20px'
+   }
+}
+
+if (event.key == 'a'){
+   document.getElementById('myImg02').style.left =
+      parseInt(document.getElementById('myImg02').style.left) - 10
+   if ( myHitOther('myImg01','myImg02') ){
+      document.getElementById('myImg02').style.left = '-20px'
+   }
+}
+
+if (event.key == 'd'){
+   document.getElementById('myImg02').style.left =
+      parseInt(document.getElementById('myImg02').style.left) + 10
+   if ( myHitOther('myImg01','myImg02') ){
+      document.getElementById('myImg02').style.left = '-20px'
+   }
+}
+
+if (event.key == 'w'){
+   document.getElementById('myImg02').style.top =
+      parseInt(document.getElementById('myImg02').style.top) - 10
+   if ( myHitOther('myImg01','myImg02') ){
+      document.getElementById('myImg02').style.top = '-20px'
+   }
+}
+
+if (event.key == 's'){
+   document.getElementById('myImg02').style.top =
+      parseInt(document.getElementById('myImg02').style.top) + 10
+   if ( myHitOther('myImg01','myImg02') ){
+      document.getElementById('myImg02').style.top = '-20px'
+   }
+}
 }">

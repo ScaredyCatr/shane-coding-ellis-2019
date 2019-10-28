@@ -18,3 +18,12 @@ make all directions(in a taable?) replace shane with an image<br>
 
 }">
 
+<input type=button value="Go Left Auto" onclick="{
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+   document.getElementById('myDiv01').style.left =
+    parseInt(document.getElementById('myDiv01').style.left) - 10
+
+    } ,200)
+}">
+

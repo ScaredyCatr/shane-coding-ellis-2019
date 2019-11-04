@@ -1,3 +1,8 @@
 <h1> t2a01-calculator-shane</h1>
 
 <input type=text id="myText01" READONLY value=""><br>
+
+<input type=button value=1 onclick="{
+    let myTemp = document.getElementById('myText01').value
+    document.getElementById('myText01').value + '1'
+}

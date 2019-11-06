@@ -1,33 +1,59 @@
 <h1> t2a01-calculator-shane</h1>
 
+<input type=text id="myText02" style="width: 50px;" READONLY value=""><br><br>
+
 <input type=text id="myText01" READONLY value=""><br>
 
 <input type=button value=1 onclick="{
     document.getElementById('myText01').innerHTML
-    document.getElementById('myText01').value + '1'
+    document.getElementById('myText01').value += '1'
 }">
 
 <input type=button value=2 onclick="{
     document.getElementById('myText01').innerHTML
-    document.getElementById('myText01').value + '2'
+    document.getElementById('myText01').value += '2'
 }">
 
 <input type=button value=3 onclick="{
     document.getElementById('myText01').innerHTML
-    document.getElementById('myText01').value + '3'
-}"><br>
+    document.getElementById('myText01').value += '3'
+}">
+
+<button onclick="document.getElementById('myText01').value = ''">C</button>
+<br>
 
 <input type=button value=4 onclick="{
     document.getElementById('myText01').innerHTML
-    document.getElementById('myText01').value + '4'
+    document.getElementById('myText01').value += '4'
 }">
 
 <input type=button value=5 onclick="{
     document.getElementById('myText01').innerHTML
-    document.getElementById('myText01').value + '5'
+    document.getElementById('myText01').value += '5'
 }">
 
 <input type=button value=6 onclick="{
     document.getElementById('myText01').innerHTML
-    document.getElementById('myText01').value + '6'
+    document.getElementById('myText01').value += '6'
+}"><br>
+
+<input type=button value=7 onclick="{
+    document.getElementById('myText01').innerHTML
+    document.getElementById('myText01').value += '7'
 }">
+
+<input type=button value=8 onclick="{
+    document.getElementById('myText01').innerHTML
+    document.getElementById('myText01').value += '8'
+}">
+
+<input type=button value=9 onclick="{
+    document.getElementById('myText01').innerHTML
+    document.getElementById('myText01').value += '9'
+}">
+
+<input type=button value=+ onclick="{
+    document.getElementById('myText01').innerHTML
+    document.getElementById('myText01').value += '9'
+}">
+

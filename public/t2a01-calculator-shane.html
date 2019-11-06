@@ -1,6 +1,20 @@
 <h1> t2a01-calculator-shane</h1>
 
-<input type=text id="myText02" style="width: 50px;" READONLY value=""><br><br>
+<script>
+
+function myFunction1() {
+
+    document.getElementById("myText01").innerHTML
+    document.getElementById("myText02").value += document.getElementById("myText01").value
+
+    document.getElementById('myText01').value = ''
+
+    document.getElementById("myCheck").checked = true;
+}
+
+</script>
+
+<input type=text id="myText02" style="width: 100px;" READONLY value=""><br><br>
 
 <input type=text id="myText01" READONLY value=""><br>
 
@@ -52,8 +66,13 @@
     document.getElementById('myText01').value += '9'
 }">
 
+
+
 <input type=button value=+ onclick="{
-    document.getElementById('myText01').innerHTML
-    document.getElementById('myText01').value += '9'
+
+    myFunction1()
+
 }">
+
+    <input type='checkbox' id='myCheck' onclick="return false;">
 

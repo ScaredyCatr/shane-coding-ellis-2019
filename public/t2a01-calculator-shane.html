@@ -16,11 +16,8 @@ function myFunction2() {
 
       document.getElementById("myCheck").checked = false;
 
-      document.getElementById('myText01').value = ''
-      document.getElementById('myText02').value = ''
-
-      document.getElementById("myText01").innerHTML
-      document.getElementById("myText01").value += document.getElementById("myText02").value
+      parseInt(document.getElementById("myText01").value) =
+      parseInt(document.getElementById("myText02").value) + parseInt(document.getElementById("myText01").value)
 
 
 }
@@ -97,6 +94,10 @@ function myFunction2() {
 }">
 
 <input type=button value='=' onclick="{
+
+      document.getElementById('myText01').value = ''
+      document.getElementById('myText02').value = ''
+
 
     if (document.getElementById('myCheck').checked = true) {
 

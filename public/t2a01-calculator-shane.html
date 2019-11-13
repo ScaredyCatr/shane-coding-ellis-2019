@@ -14,10 +14,13 @@ function myFunction1() {
 
 function myFunction2() {
 
+    let myTextbox01 = document.getElementById("myText01").value;
+    let myTextbox02 = document.getElementById("myText02").value;
+
       document.getElementById("myCheck").checked = false;
 
-      document.getElementById("myText01").value =
-      parseInt(document.getElementById("myText02").value) + parseInt(document.getElementById("myText01").value)
+    document.getElementById("myText01").value = 
+    parseFloat(myTextbox01)+parseFloat(myTextbox02)
 
 
 }

@@ -1,17 +1,19 @@
 <input id="myButton01" type="button" READONLY value="Extend a class" onclick="{
 
 class myAnimal {
-    constructor(passName, passAge, passType, passHair) {
+    constructor(passName, passAge, passType, passHair, passShirt) {
         this.myName = passName;
         this.myAge = passAge;
         this.myType = passType;
         this.myHair = passHair;
+        this.myShirt = passShirt;
 
     }
 
 myShow1(){
    document.getElementById('myDiv01').innerHTML = 'Hello ' + this.myName +
-        '. You are ' + this.myAge + ' years old.<br> Your hair is ' + this.myHair + '. '
+        '. You are ' + this.myAge + ' years old.<br> Your hair is ' + this.myHair +
+        '. The shirt you are wearing is ' + this.myShirt + '. '
 
       }
   }  // end class myAnimal
@@ -27,7 +29,7 @@ class myCat extends myAnimal {
 } // end extended class myCat
 
 
-  myPet = new myAnimal('Jeff', 21, '', 'brown')
+  myPet = new myAnimal('Jeff', 21, '', 'Brown', 'Red')
   myPet.myShow1()
 
   myPet = new myCat('Kitkat', 2, 'Persian', 'White')

@@ -1,0 +1,24 @@
+<h2>t2a10-local-storage-shane</h2>
+
+<body onload="{
+    myStorage = localStorage.getItem('myStoredText')
+    if(myStorage != null){
+        document.getElementById('myText01').value = myStorage
+    }
+}">
+
+<body onunload="{
+    localStorage.setItem('myStoredText',document.getElementById('myText01').value)
+}">
+
+Text example: <input id="myText01" type=text size=70 value="" placeholder="Write here to store"><br>
+
+<input type="button" value="Store Text" onclick="{
+    localStorage.setItem('myStoredText', document.getElementById('myText01').value)
+    alert(document.getElementById('myText01').value + ' \nHas been stored')
+    document.getElementById('myText01').value = ''
+}">
+
+<input type="button" value="retrieve Text" onclick="{
+    document.getElementById('myText01').value = localStorage.getItem('myStoredText')
+}">

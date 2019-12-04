@@ -1,32 +1,56 @@
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01">
 
-<h1 align=center>t2a07 Move Background Shane</h1>
+<body id="myBody" style="background-repeat: url("https://phaser.io/content/tutorials/coding-tips-003/platform.png");
+background-size: 90%" background=
+"inline_image_preview.jpg">
 
+
+<img id="myImage02" width=40 src="Enchanted_Rock_boulder.jpg" 
+    style="position:absolute; width:400px; height:300px;  left:900px; top:100px">
 
 <script>
-    let myGlobalX = 0
-    let myClock
+   let myGlobalX = 0
+   let myClock
+   let myClock1
 </script>
 
 <input id="myButton01" type=button value="background move left" onclick="{
-    myTemp = '100px 0px'
-    myGlobalX -= 5
-    myTemp = myGlobalX + 'px 0px'
-    document.getElementById('myBody').style.backgroundPosition = myTemp
+  myTemp = '100px 0px'
+  myGlobalX -= 5
+  myTemp = myGlobalX + 'px 0px'
+  //myTemp = '0px '+ myGlobalX + 'px'  (moves down only)
+  document.getElementById('myBody').style.backgroundPosition =myTemp
 
 }">
 
-<input type=button value="Auto Background Left" onclick="{
-    clearInterval(myClock)
-    myClock = setInterval(function(){
-        document.getElementById('myButton01').click()
-    }, 100)
+<input id="myButton02" type=button value="background move right" onclick="{
+   myTemp = '100px 0px'
+  myGlobalX += 5
+  myTemp = myGlobalX + 'px 0px'
+  //myTemp = '0px '+ myGlobalX + 'px'  (moves left only)
+  document.getElementById('myBody').style.backgroundPosition =myTemp
+
 }">
 
+<input type=button value="Auto Background" onclick="{
+  clearInterval(myClock)
+  myClock = setInterval(function(){
+    document.getElementById('myButton01').click()
+   }, 100)
 
-<input type=button value="image Right" onclick="{
-      document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left)
-       + 10 + 'px'  
-}"><br><br>
+}">   
 
-<img id="image01" style="position:relative; width:100px; height: 80px; top:0px; left:0px;" src="https://media.giphy.com/media/JhncGNdBoyeKk/giphy.gif">
+<input id="myButton03" type=button value="image move left" onclick="{
+document.getElementById('myImage02').style.left = 
+    parseInt(document.getElementById('myImage02').style.left) - 5 + 'px'
+       document.getElementById('myImage02').style
+
+
+}">
+
+<input type=button value="Auto Image" onclick="{
+  clearInterval(myClock1)
+  myClock1 = setInterval(function(){
+    document.getElementById('myButton03').click()
+   }, 110)
+
+}">  

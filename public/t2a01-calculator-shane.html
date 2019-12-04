@@ -1,35 +1,32 @@
 <h1> t2a01-calculator-shane</h1>
 
 <script>
-
 function myFunction1() {
-
     document.getElementById("myText01").innerHTML
     document.getElementById("myText02").value += document.getElementById("myText01").value
-
     document.getElementById('myText01').value = ''
-
     document.getElementById("myCheck").checked = true;
 }
-
 function myFunction2() {
+    
+    let myText01 = document.getElementById("myText01").value;
+    let myText02 = document.getElementById("myText02").value;
 
-    let myTextbox01 = document.getElementById("myText01").value;
-    let myTextbox02 = document.getElementById("myText02").value;
+    let result = 
+    parseFloat(myText01) + parseFloat(myText02)
 
-      document.getElementById("myCheck").checked = false;
+    if (!isNaN(result)) {
+    document.getElementById('myText03').innerHTML = result;
 
-    document.getElementById("myText01").value = 
-    parseFloat(myTextbox01)+parseFloat(myTextbox02)
-
-
+    document.getElementById("myCheck").checked = false;
+}
 }
 
 </script>
 
 <input type=text id="myText02" style="width: 100px;" READONLY value=""><br><br>
 
-<input type=text id="myText01" READONLY value=""><br>
+<input type=text id="myText01" READONLY value=""><input type=text id="myText03" READONLY value=""><br>
 
 <input type=button value=1 onclick="{
     document.getElementById('myText01').innerHTML
@@ -47,10 +44,8 @@ function myFunction2() {
 }">
 
 <input type=button value=C onclick="{
-
      document.getElementById('myText01').value = ''
      document.getElementById('myText02').value = ''
-
 }">
 <br>
 
@@ -92,24 +87,15 @@ function myFunction2() {
 
 
 <input type=button value=+ onclick="{
-
     myFunction1()
-
 }">
 
 <input type=button value='=' onclick="{
-
       document.getElementById('myText01').value = ''
       document.getElementById('myText02').value = ''
-
-
     if (document.getElementById('myCheck').checked = true) {
-
     myFunction2()
-
     }
-
 }">
 
     <input type='checkbox' id='myCheck' onclick="return false;">
-

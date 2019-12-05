@@ -13,9 +13,9 @@ function myFunction2() {
     let myText02 = document.getElementById("myText02").value;
 
     let result = 
-    parseFloat(myText01) + parseFloat(myText02)
+    parseFloat(myText01) += parseFloat(myText02)
 
-    if (!isNaN(result)) {
+    if (!NaN(result)) {
     document.getElementById('myText03').innerHTML = result;
 
     document.getElementById("myCheck").checked = false;

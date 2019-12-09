@@ -7,19 +7,11 @@ function myFunction1() {
     document.getElementById('myText01').value = ''
     document.getElementById("myCheck").checked = true;
 }
+
 function myFunction2() {
-    
-    let myText01 = document.getElementById("myText01").value;
-    let myText02 = document.getElementById("myText02").value;
 
-    let result = 
-    parseFloat(myText01) += parseFloat(myText02)
-
-    if (!NaN(result)) {
-    document.getElementById('myText03').innerHTML = result;
-
-    document.getElementById("myCheck").checked = false;
-}
+    document.getElementById('myText03').value = 
+    parseInt(document.getElementById('myText01').value) + parseInt(document.getElementById('myText02').value)
 }
 
 </script>

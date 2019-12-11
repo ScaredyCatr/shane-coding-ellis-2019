@@ -8,11 +8,6 @@ src="New Piskel.gif">
 src="New Piskel.gif">
 
 <script>
-
-   let myGlobalX = 0
-   let myClock
-   let myClock1
-
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
@@ -39,7 +34,7 @@ if (event.key == 'w'){
    document.getElementById('myImg01').style.top =
       parseInt(document.getElementById('myImg01').style.top) - 90
       if ( myHitOther('myImg01','myImg02') ){
-      document.getElementById('myImg01').style.top -= '90px'
+      document.getElementById('myImg01').style.top = '90px'
    }
 }
 
@@ -47,7 +42,7 @@ if (event.key == 's'){
    document.getElementById('myImg01').style.top =
       parseInt(document.getElementById('myImg01').style.top) + 90
       if ( myHitOther('myImg01','myImg02') ){
-      document.getElementById('myImg01').style.top -= '90px'
+      document.getElementById('myImg01').style.top = '90px'
    }
 }
 

@@ -18,6 +18,11 @@ function myHitOther(my1,my2){
    }
 }
 
+let x = document.getElementById("myAudio");
+
+function playAudio() {
+  x.play();
+}
 </script>
 
 
@@ -28,7 +33,7 @@ function myHitOther(my1,my2){
 <img src="https://media.tenor.com/images/97393c7de926cdbfd8ceb49b43364d08/tenor.gif" id="myImg01" style="position:absolute; left:200; top:200; width:100; height:100; ">
 <img src="https://media.tenor.com/images/498558d092bd097cf486cc009fa93f05/tenor.gif" id="myImg02" style="position:absolute; left:400; top:200; width:100; height:100; ">
 
-<audio controls>
+<audio id="myAudio" controls>
   <source src="monkey1.mp3" type="audio/mpeg">
   <source src="monkey1.ogg" type="audio/ogg">
 </audio>
@@ -41,6 +46,7 @@ if (event.key == 'd'){
       document.getElementById('myImg02').style.left = '650px'
       document.getElementById('myText01').value = 
       parseInt(document.getElementById('myText01').value) + 1
+      function playAudio()
    }
 }
 

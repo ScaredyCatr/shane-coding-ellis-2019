@@ -1,12 +1,6 @@
 <body id="myBody" style="background-repeat:
 background-size: 90%" background="ROADEZ.png">
 
-<img id="myImg01" style="position:relative; width:170px; height: 170px; top:-20px; left:200px;" 
-src="New Piskel.gif">
-
-<img id="myImg02" style="position:relative; width:70px; height:70px; top:90px; left:100px;" 
-src="donkeykogng.jpg">
-
 <script>
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
@@ -28,13 +22,20 @@ function myHitOther(my1,my2){
 
 </script>
 
+<img id="myImg01" style="position:relative; width:170px; height: 170px; top:-20px; left:200px;" 
+src="New Piskel.gif">
+
+<img id="myImg02" style="position:relative; width:70px; height:70px; top:90px; left:100px;" 
+src="donkeykogng.jpg">
+
+
 <body onkeydown="{
 
 if (event.key == 'w'){
    document.getElementById('myImg01').style.top =
       parseInt(document.getElementById('myImg01').style.top) - 90
       if ( myHitOther('myImg01','myImg02') ){
-      document.getElementById('myImg01').style.top = '90px'
+      parseInt(document.getElementById('myImg01').style.top) + 90
    }
 
 }
@@ -43,7 +44,7 @@ if (event.key == 's'){
    document.getElementById('myImg01').style.top =
       parseInt(document.getElementById('myImg01').style.top) + 90
       if ( myHitOther('myImg01','myImg02') ){
-      document.getElementById('myImg01').style.top = '90px'
+      parseInt(document.getElementById('myImg01').style.top) - 90
    }
 
 }

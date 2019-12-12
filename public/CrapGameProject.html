@@ -41,6 +41,8 @@ if (event.key == 'w'){
 if (event.key == 's'){
    document.getElementById('myImg01').style.top =
       parseInt(document.getElementById('myImg01').style.top) + 90
+      if ( myHitOther('myImg01','myImg02') ){
+      document.getElementById('myImg02').style.left = '450px'
 }
 
 }">

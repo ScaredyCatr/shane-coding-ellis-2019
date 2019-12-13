@@ -1,0 +1,828 @@
+<h3 align=center > Factory Escape</h3>
+
+<body background="https://img.freepik.com/free-photo/gray-painted-background_53876-94041.jpg?size=626&ext=jpg">
+  
+<body text="red">
+
+<p>If your score drops below 1, you lose. Be careful!</p>
+
+<button onclick="location.reload()">Restart</button>
+
+<script>
+   let myGlobalX = 0
+   let myClock
+   let myClock1
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
+
+myStart = new Date().getTime()
+document.onkeydown = checkKey;
+function checkKey(myEvent) {
+   let myEnd = new Date().getTime()
+   let myDuration = Math.round((myEnd-myStart)/1000)
+   document.getElementById('myDiv01').innerHTML = 'seconds: ' + myDuration +
+', keyCode: '+myEvent.keyCode
+
+
+if (myHitOther('myImage01','myImage02')){
+
+        document.getElementById('myImage02').style.display = 'none';          
+         
+         document.getElementById('myScore').value = 
+         parseInt(document.getElementById('myScore').value) + 1 
+         
+          document.getElementById('myImage02').style.top = 
+          parseInt(document.getElementById('myImage02').style.top) - 2500 + 'px' 
+          document.getElementById('myImage03').style.top = 
+          parseInt(document.getElementById('myImage03').style.top) + 25450 + 'px'        
+          document.getElementById('myImage04').style.top = 
+          parseInt(document.getElementById('myImage04').style.top) + 25600 + 'px' 
+          document.getElementById('myImage05').style.top = 
+          parseInt(document.getElementById('myImage05').style.top) + 25400 + 'px'
+          document.getElementById('myImage06').style.top = 
+          parseInt(document.getElementById('myImage06').style.top) + 25400 + 'px'
+          document.getElementById('myImage07').style.top = 
+          parseInt(document.getElementById('myImage07').style.top) + 25350 + 'px'
+          document.getElementById('myImage51').style.top = 
+          parseInt(document.getElementById('myImage51').style.top) + 25350 + 'px'
+          document.getElementById('myImage51').style.display = 'none'; 
+
+}
+
+if (myEvent.keyCode == 38){ document.getElementById('myImage01').style.top = 
+       parseInt(document.getElementById('myImage01').style.top) - 3 + 'px'
+}  //up arrow = 38
+
+if (myEvent.keyCode == 37){ document.getElementById('myImage01').style.left = 
+      parseInt(document.getElementById('myImage01').style.left)  - 3 + 'px' 
+}  // left arrow= 37
+
+if (myEvent.keyCode == 40){ document.getElementById('myImage01').style.top = 
+    parseInt(document.getElementById('myImage01').style.top) + 3 + 'px' 
+}  //down arrow 40
+     
+if (myEvent.keyCode == 39){ document.getElementById('myImage01').style.left = 
+    parseInt(document.getElementById('myImage01').style.left) + 3 + 'px'
+}  //right arrow= 39
+
+if (document.getElementById('myScore').value <= 0){
+
+        document.getElementById('myImage51').style.display = ''; 
+                   document.getElementById('myImage01').style.top = 
+          parseInt(document.getElementById('myImage01').style.top) - 10000 + 'px'  
+
+}
+
+if (myHitOther('myImage01','myImage05')){
+                document.getElementById('myScore').value = 
+         parseInt(document.getElementById('myScore').value) - 1 
+                   document.getElementById('myImage01').style.top = 
+          parseInt(document.getElementById('myImage01').style.top) - 210 + 'px' 
+}
+
+if (myHitOther('myImage01','myImage06')){
+                document.getElementById('myScore').value = 
+         parseInt(document.getElementById('myScore').value) - 1 
+                   document.getElementById('myImage01').style.top = 
+          parseInt(document.getElementById('myImage01').style.top) - 210 + 'px' 
+}
+  
+if (myHitOther('myImage01','myImage07')){
+                document.getElementById('myScore').value = 
+         parseInt(document.getElementById('myScore').value) - 1 
+                   document.getElementById('myImage01').style.left = 
+          parseInt(document.getElementById('myImage01').style.left) - 150 + 'px' 
+}
+
+if (myHitOther('myImage01','myImage08')){
+location.reload();
+}
+
+if (myHitOther('myImage01','myImage03')){
+        document.getElementById('myImage03').style.display = 'none'; 
+                document.getElementById('myScore').value = 
+         parseInt(document.getElementById('myScore').value) + 1 
+                   document.getElementById('myImage03').style.top = 
+          parseInt(document.getElementById('myImage03').style.top) - 25450 + 'px' 
+   
+}
+
+if (myHitOther('myImage01','myImage04')){
+        document.getElementById('myImage03').style.display = 'none'; 
+                document.getElementById('myScore').value = 
+         parseInt(document.getElementById('myScore').value) + 1
+                   document.getElementById('myImage04').style.top = 
+          parseInt(document.getElementById('myImage04').style.top) - 25450 + 'px'
+                   document.getElementById('myImage10').style.top = 
+          parseInt(document.getElementById('myImage10').style.top) + 25880 + 'px'
+                   document.getElementById('myImage05').style.top = 
+          parseInt(document.getElementById('myImage05').style.top) - 25400 + 'px'
+                   document.getElementById('myImage06').style.top = 
+          parseInt(document.getElementById('myImage06').style.top) - 25400 + 'px'
+                   document.getElementById('myImage07').style.top = 
+          parseInt(document.getElementById('myImage07').style.top) - 25380 + 'px'
+                   document.getElementById('myImage12').style.top = 
+          parseInt(document.getElementById('myImage12').style.top) + 25550 + 'px'    
+                   document.getElementById('myImage13').style.top = 
+          parseInt(document.getElementById('myImage13').style.top) + 26000 + 'px'       
+  
+}
+
+if (myHitOther('myImage01','myImage10')){
+                   document.getElementById('myImage01').style.top = 
+          parseInt(document.getElementById('myImage01').style.top) + 15 + 'px'
+}
+
+if (myHitOther('myImage01','myImage13')){
+        document.getElementById('myImage13').style.display = 'none'; 
+                document.getElementById('myScore').value = 
+         parseInt(document.getElementById('myScore').value) + 1 
+                   document.getElementById('myImage13').style.top = 
+          parseInt(document.getElementById('myImage13').style.top) - 25450 + 'px'
+                   document.getElementById('myImage12').style.top = 
+          parseInt(document.getElementById('myImage12').style.top) - 25450 + 'px'
+                   document.getElementById('myImage14').style.top = 
+          parseInt(document.getElementById('myImage14').style.top) + 25555 + 'px'
+                   document.getElementById('myImage15').style.top = 
+          parseInt(document.getElementById('myImage15').style.top) + 25555 + 'px'
+}
+
+if (myHitOther('myImage01','myImage15')){
+        document.getElementById('myImage15').style.display = 'none'; 
+                document.getElementById('myScore').value = 
+         parseInt(document.getElementById('myScore').value) + 1 
+                   document.getElementById('myImage15').style.top = 
+          parseInt(document.getElementById('myImage15').style.top) - 25450 + 'px'
+                   document.getElementById('myImage14').style.top = 
+          parseInt(document.getElementById('myImage14').style.top) - 25450 + 'px'
+                   document.getElementById('myImage17').style.top = 
+          parseInt(document.getElementById('myImage17').style.top) + 25555 + 'px'
+                   document.getElementById('myImage16').style.top = 
+          parseInt(document.getElementById('myImage16').style.top) + 25570 + 'px'
+}
+
+if (myHitOther('myImage01','myImage17')){
+        document.getElementById('myImage17').style.display = 'none'; 
+                document.getElementById('myScore').value = 
+         parseInt(document.getElementById('myScore').value) + 1 
+                   document.getElementById('myImage17').style.top = 
+          parseInt(document.getElementById('myImage17').style.top) - 25450 + 'px'
+                   document.getElementById('myImage16').style.top = 
+          parseInt(document.getElementById('myImage16').style.top) - 25450 + 'px'
+                   document.getElementById('myImage18').style.top = 
+          parseInt(document.getElementById('myImage18').style.top) + 25500 + 'px'
+                   document.getElementById('myImage19').style.top = 
+          parseInt(document.getElementById('myImage19').style.top) + 25999 + 'px'
+}
+
+if (myHitOther('myImage01','myImage19')){
+        document.getElementById('myImage19').style.display = 'none'; 
+        document.getElementById('myImage23').style.display = 'none'; 
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) + 1
+                   document.getElementById('myImage19').style.top = 
+          parseInt(document.getElementById('myImage19').style.top) + 25000 + 'px'     
+                   document.getElementById('myImage26').style.top = 
+          parseInt(document.getElementById('myImage26').style.top) + 25000 + 'px'     
+                   document.getElementById('myImage21').style.top = 
+          parseInt(document.getElementById('myImage21').style.top) + 25540 + 'px'
+                   document.getElementById('myImage27').style.top = 
+          parseInt(document.getElementById('myImage27').style.top) + 25540 + 'px'
+                   document.getElementById('myImage28').style.top = 
+          parseInt(document.getElementById('myImage28').style.top) + 25540 + 'px'
+                   document.getElementById('myImage29').style.top = 
+          parseInt(document.getElementById('myImage29').style.top) + 25540 + 'px'
+                   document.getElementById('myImage30').style.top = 
+          parseInt(document.getElementById('myImage30').style.top) + 25540 + 'px'
+                   document.getElementById('myImage31').style.top = 
+          parseInt(document.getElementById('myImage31').style.top) + 25540 + 'px'
+                   document.getElementById('myImage18').style.top = 
+          parseInt(document.getElementById('myImage18').style.top) - 25500 + 'px'
+                   document.getElementById('myImage11').style.top = 
+          parseInt(document.getElementById('myImage11').style.top) - 25500 + 'px'
+                   document.getElementById('myImage10').style.top = 
+          parseInt(document.getElementById('myImage10').style.top) - 25500 + 'px'
+                   document.getElementById('myImage01').style.left = 
+          parseInt(document.getElementById('myImage01').style.left) - 950 + 'px'
+                   document.getElementById('myImage20').style.top = 
+          parseInt(document.getElementById('myImage20').style.top) + 25400 + 'px'
+                   document.getElementById('myImage22').style.top = 
+          parseInt(document.getElementById('myImage22').style.top) + 25400 + 'px'
+                   document.getElementById('myImage24').style.top = 
+          parseInt(document.getElementById('myImage24').style.top) + 25400 + 'px'
+                   document.getElementById('myImage25').style.top = 
+          parseInt(document.getElementById('myImage25').style.top) + 25400 + 'px'
+}
+
+if (myHitOther('myImage01','myImage24')){
+                   document.getElementById('myImage23').style.top = 
+          parseInt(document.getElementById('myImage23').style.top) + 25400 + 'px'
+          document.getElementById('myImage24').style.top = 
+          parseInt(document.getElementById('myImage24').style.top) - 25450 + 'px'
+        document.getElementById('myImage24').style.display = 'none'; 
+        document.getElementById('myImage23').style.display = 'initial'; 
+                document.getElementById('myScore').value = 
+         parseInt(document.getElementById('myScore').value) + 1 
+}
+
+if (myHitOther('myImage01','myImage20')){
+                   document.getElementById('myImage01').style.left = 
+          parseInt(document.getElementById('myImage01').style.left) + 100 + 'px'
+                document.getElementById('myScore').value = 
+         parseInt(document.getElementById('myScore').value) - 1 
+}
+
+if (myHitOther('myImage01','myImage22')){
+                   document.getElementById('myImage01').style.left = 
+          parseInt(document.getElementById('myImage01').style.left) - 800 + 'px'
+                document.getElementById('myScore').value = 
+         parseInt(document.getElementById('myScore').value) - 1 
+}
+
+if (myHitOther('myImage01','myImage26')){
+document.getElementById('myImage21').style.left = 
+    parseInt(document.getElementById('myImage21').style.left) - 30 + 'px'
+       document.getElementById('myImage21').style
+document.getElementById('myImage27').style.left = 
+    parseInt(document.getElementById('myImage27').style.left) - 30 + 'px'
+       document.getElementById('myImage27').style
+document.getElementById('myImage28').style.left = 
+    parseInt(document.getElementById('myImage28').style.left) - 30 + 'px'
+       document.getElementById('myImage28').style
+document.getElementById('myImage29').style.left = 
+    parseInt(document.getElementById('myImage29').style.left) + 30 + 'px'
+       document.getElementById('myImage29').style
+document.getElementById('myImage30').style.left = 
+    parseInt(document.getElementById('myImage30').style.left) + 30 + 'px'
+       document.getElementById('myImage30').style
+document.getElementById('myImage31').style.left = 
+    parseInt(document.getElementById('myImage31').style.left) + 30 + 'px'
+       document.getElementById('myImage31').style
+       
+}
+
+
+if (myHitOther('myImage21','myImage20')){
+document.getElementById('myImage21').style.left =
+  parseInt(document.getElementById('myImage21').style.left) + 800 + 'px'
+     document.getElementById('myImage21').style
+}
+
+if (myHitOther('myImage27','myImage20')){
+document.getElementById('myImage27').style.left =
+  parseInt(document.getElementById('myImage27').style.left) + 800 + 'px'
+     document.getElementById('myImage27').style
+}
+
+if (myHitOther('myImage28','myImage20')){
+document.getElementById('myImage28').style.left =
+  parseInt(document.getElementById('myImage28').style.left) + 800 + 'px'
+     document.getElementById('myImage28').style
+}
+
+if (myHitOther('myImage29','myImage22')){
+document.getElementById('myImage29').style.left =
+  parseInt(document.getElementById('myImage29').style.left) - 800 + 'px'
+     document.getElementById('myImage29').style
+}
+
+if (myHitOther('myImage30','myImage22')){
+document.getElementById('myImage30').style.left =
+  parseInt(document.getElementById('myImage30').style.left) - 800 + 'px'
+     document.getElementById('myImage30').style
+}
+
+if (myHitOther('myImage31','myImage22')){
+document.getElementById('myImage31').style.left =
+  parseInt(document.getElementById('myImage31').style.left) - 800 + 'px'
+     document.getElementById('myImage31').style
+}
+
+if (myHitOther('myImage01','myImage21')){
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) - 1
+document.getElementById('myImage01').style.top =
+  parseInt(document.getElementById('myImage01').style.top) + 110 + 'px'
+     document.getElementById('myImage01').style
+}
+
+if (myHitOther('myImage01','myImage27')){
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) - 1 
+document.getElementById('myImage01').style.top =
+  parseInt(document.getElementById('myImage01').style.top) + 110 + 'px'
+     document.getElementById('myImage01').style
+}
+
+if (myHitOther('myImage01','myImage28')){
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) - 1 
+document.getElementById('myImage01').style.top =
+  parseInt(document.getElementById('myImage01').style.top) + 110 + 'px'
+     document.getElementById('myImage01').style
+}
+
+if (myHitOther('myImage01','myImage29')){
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) - 1
+document.getElementById('myImage01').style.top =
+  parseInt(document.getElementById('myImage01').style.top) + 110 + 'px'
+     document.getElementById('myImage01').style
+}
+
+if (myHitOther('myImage01','myImage30')){
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) - 1
+document.getElementById('myImage01').style.top =
+  parseInt(document.getElementById('myImage01').style.top) + 110 + 'px'
+     document.getElementById('myImage01').style
+}
+
+if (myHitOther('myImage01','myImage31')){
+                document.getElementById('myScore').value =
+          parseInt(document.getElementById('myScore').value) - 1
+document.getElementById('myImage01').style.top =
+  parseInt(document.getElementById('myImage01').style.top) + 110 + 'px'
+     document.getElementById('myImage01').style
+}
+
+if (myHitOther('myImage01','myImage23')){
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) + 1 
+                   document.getElementById('myImage45').style.top = 
+          parseInt(document.getElementById('myImage45').style.top) + 25400 + 'px'
+                   document.getElementById('myImage44').style.top = 
+          parseInt(document.getElementById('myImage44').style.top) + 25100 + 'px'
+                   document.getElementById('myImage43').style.top = 
+          parseInt(document.getElementById('myImage43').style.top) + 25400 + 'px'
+                   document.getElementById('myImage10').style.top = 
+          parseInt(document.getElementById('myImage10').style.top) + 25200 + 'px'
+                   document.getElementById('myImage32').style.top = 
+          parseInt(document.getElementById('myImage32').style.top) + 25400 + 'px'
+                   document.getElementById('myImage34').style.top = 
+          parseInt(document.getElementById('myImage34').style.top) + 25400 + 'px'
+                   document.getElementById('myImage36').style.top = 
+          parseInt(document.getElementById('myImage36').style.top) + 25400 + 'px'
+                   document.getElementById('myImage37').style.top = 
+          parseInt(document.getElementById('myImage37').style.top) + 25400 + 'px'
+                   document.getElementById('myImage39').style.top = 
+          parseInt(document.getElementById('myImage39').style.top) + 25400 + 'px'
+                   document.getElementById('myImage41').style.top = 
+          parseInt(document.getElementById('myImage41').style.top) + 25400 + 'px'
+                   document.getElementById('myImage42').style.top = 
+          parseInt(document.getElementById('myImage42').style.top) + 25400 + 'px'
+                   document.getElementById('myImage23').style.top = 
+          parseInt(document.getElementById('myImage23').style.top) - 25400 + 'px'  
+                   document.getElementById('myImage21').style.top = 
+          parseInt(document.getElementById('myImage21').style.top) - 25540 + 'px'
+                   document.getElementById('myImage27').style.top = 
+          parseInt(document.getElementById('myImage27').style.top) - 25540 + 'px'
+                   document.getElementById('myImage28').style.top = 
+          parseInt(document.getElementById('myImage28').style.top) - 25540 + 'px'
+                   document.getElementById('myImage29').style.top = 
+          parseInt(document.getElementById('myImage29').style.top) - 25540 + 'px'
+                   document.getElementById('myImage30').style.top = 
+          parseInt(document.getElementById('myImage30').style.top) - 25540 + 'px'
+                   document.getElementById('myImage31').style.top = 
+          parseInt(document.getElementById('myImage31').style.top) - 25540 + 'px'
+                   document.getElementById('myImage20').style.top = 
+          parseInt(document.getElementById('myImage20').style.top) - 25400 + 'px'
+                   document.getElementById('myImage22').style.top = 
+          parseInt(document.getElementById('myImage22').style.top) - 25400 + 'px'
+                   document.getElementById('myImage24').style.top = 
+          parseInt(document.getElementById('myImage24').style.top) - 25400 + 'px'
+                   document.getElementById('myImage25').style.top = 
+          parseInt(document.getElementById('myImage25').style.top) - 25400 + 'px'
+}
+
+if (myHitOther('myImage01','myImage37')){
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) - 1 
+       
+            document.getElementById('myImage01').style.left = 
+    parseInt(document.getElementById('myImage01').style.left) + 300 + 'px'
+       document.getElementById('myImage01').style
+}
+
+if (myHitOther('myImage01','myImage39')){
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) - 1 
+            document.getElementById('myImage01').style.left = 
+    parseInt(document.getElementById('myImage01').style.left) + 700 + 'px'
+       document.getElementById('myImage01').style
+}
+
+if (myHitOther('myImage01','myImage41')){
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) - 1 
+      document.getElementById('myImage01').style.left = 
+    parseInt(document.getElementById('myImage01').style.left) + 1100 + 'px'
+       document.getElementById('myImage01').style
+}
+
+if (myHitOther('myImage01','myImage42')){
+document.getElementById('myImage37').style.top = 
+    parseInt(document.getElementById('myImage37').style.top) + 13 + 'px'
+       document.getElementById('myImage37').style
+document.getElementById('myImage39').style.top = 
+    parseInt(document.getElementById('myImage39').style.top) + 13 + 'px'
+       document.getElementById('myImage39').style
+document.getElementById('myImage41').style.top = 
+    parseInt(document.getElementById('myImage41').style.top) + 13 + 'px'
+       document.getElementById('myImage41').style
+}
+
+if (myHitOther('myImage37','myImage43')){
+document.getElementById('myImage37').style.top = 
+    parseInt(document.getElementById('myImage37').style.top) - 500 + 'px'
+       document.getElementById('myImage37').style
+}
+
+if (myHitOther('myImage39','myImage43')){
+document.getElementById('myImage39').style.top = 
+    parseInt(document.getElementById('myImage39').style.top) - 500 + 'px'
+       document.getElementById('myImage39').style
+}
+
+if (myHitOther('myImage41','myImage43')){
+document.getElementById('myImage41').style.top = 
+    parseInt(document.getElementById('myImage41').style.top) - 500 + 'px'
+       document.getElementById('myImage41').style
+}
+
+if (myHitOther('myImage01','myImage43')){
+                   document.getElementById('myImage01').style.top = 
+          parseInt(document.getElementById('myImage01').style.top) - 15 + 'px'
+}
+
+if (myHitOther('myImage01','myImage45')){
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) + 1
+                   document.getElementById('myImage45').style.top = 
+          parseInt(document.getElementById('myImage45').style.top) - 10000 + 'px'
+                   document.getElementById('myImage46').style.top = 
+          parseInt(document.getElementById('myImage46').style.top) + 25400 + 'px'
+}
+
+if (myHitOther('myImage01','myImage46')){
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) + 1 
+                   document.getElementById('myImage46').style.top = 
+          parseInt(document.getElementById('myImage46').style.top) - 10000 + 'px'
+                   document.getElementById('myImage47').style.top = 
+          parseInt(document.getElementById('myImage47').style.top) + 25400 + 'px'
+}
+
+if (myHitOther('myImage01','myImage47')){
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) + 1 
+                   document.getElementById('myImage61').style.top = 
+          parseInt(document.getElementById('myImage61').style.top) + 25400 + 'px'
+                   document.getElementById('myImage58').style.top = 
+          parseInt(document.getElementById('myImage58').style.top) + 25350 + 'px'
+                   document.getElementById('myImage59').style.top = 
+          parseInt(document.getElementById('myImage59').style.top) + 25350 + 'px'
+                   document.getElementById('myImage60').style.top = 
+          parseInt(document.getElementById('myImage60').style.top) + 25350 + 'px'
+                   document.getElementById('myImage57').style.top = 
+          parseInt(document.getElementById('myImage57').style.top) + 25280 + 'px'
+                   document.getElementById('myImage56').style.top = 
+          parseInt(document.getElementById('myImage56').style.top) + 25950 + 'px'
+                   document.getElementById('myImage55').style.top = 
+          parseInt(document.getElementById('myImage55').style.top) + 25350 + 'px'
+                   document.getElementById('myImage54').style.top = 
+          parseInt(document.getElementById('myImage54').style.top) + 25290 + 'px'
+                   document.getElementById('myImage53').style.top = 
+          parseInt(document.getElementById('myImage53').style.top) + 25600 + 'px'
+                   document.getElementById('myImage01').style.top = 
+          parseInt(document.getElementById('myImage01').style.top) + 220 + 'px'
+                   document.getElementById('myImage46').style.top = 
+          parseInt(document.getElementById('myImage46').style.top) - 10000 + 'px'
+                   document.getElementById('myImage47').style.top = 
+          parseInt(document.getElementById('myImage47').style.top) - 25400 + 'px'
+                   document.getElementById('myImage45').style.top =          
+          parseInt(document.getElementById('myImage45').style.top) - 25400 + 'px'
+                   document.getElementById('myImage44').style.top = 
+          parseInt(document.getElementById('myImage44').style.top) - 25100 + 'px'
+                   document.getElementById('myImage43').style.top = 
+          parseInt(document.getElementById('myImage43').style.top) - 25400 + 'px'
+                   document.getElementById('myImage10').style.top = 
+          parseInt(document.getElementById('myImage10').style.top) - 25200 + 'px'
+                   document.getElementById('myImage32').style.top = 
+          parseInt(document.getElementById('myImage32').style.top) - 25400 + 'px'
+                   document.getElementById('myImage34').style.top = 
+          parseInt(document.getElementById('myImage34').style.top) - 25400 + 'px'
+                   document.getElementById('myImage36').style.top = 
+          parseInt(document.getElementById('myImage36').style.top) - 25400 + 'px'
+                   document.getElementById('myImage37').style.top = 
+          parseInt(document.getElementById('myImage37').style.top) - 25400 + 'px'
+                   document.getElementById('myImage39').style.top = 
+          parseInt(document.getElementById('myImage39').style.top) - 25400 + 'px'
+                   document.getElementById('myImage41').style.top = 
+          parseInt(document.getElementById('myImage41').style.top) - 25400 + 'px'
+                   document.getElementById('myImage42').style.top = 
+          parseInt(document.getElementById('myImage42').style.top) - 25400 + 'px'
+}
+
+if (myHitOther('myImage01','myImage56')){
+                   document.getElementById('myImage01').style.top = 
+          parseInt(document.getElementById('myImage01').style.top) - 19 + 'px'
+}
+
+if (myHitOther('myImage01','myImage53')){
+                   document.getElementById('myImage01').style.top = 
+          parseInt(document.getElementById('myImage01').style.top) + 19 + 'px'
+}
+
+if (myHitOther('myImage01','myImage58')){
+
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) - 1 
+
+                   document.getElementById('myImage01').style.top = 
+          parseInt(document.getElementById('myImage01').style.top) + 150 + 'px'
+}
+
+if (myHitOther('myImage01','myImage59')){
+
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) - 1 
+
+                   document.getElementById('myImage01').style.top = 
+          parseInt(document.getElementById('myImage01').style.top) + 150 + 'px'
+}
+
+if (myHitOther('myImage01','myImage60')){
+
+                document.getElementById('myScore').value = 
+          parseInt(document.getElementById('myScore').value) - 1 
+
+                   document.getElementById('myImage01').style.top = 
+          parseInt(document.getElementById('myImage01').style.top) + 150 + 'px'
+}
+
+if (myHitOther('myImage01','myImage61')){
+
+document.getElementById('myImage58').style.top = 
+    parseInt(document.getElementById('myImage58').style.top) + 16 + 'px'
+       document.getElementById('myImage58').style
+document.getElementById('myImage59').style.top = 
+    parseInt(document.getElementById('myImage59').style.top) + 16 + 'px'
+       document.getElementById('myImage59').style
+document.getElementById('myImage60').style.top = 
+    parseInt(document.getElementById('myImage60').style.top) + 16 + 'px'
+       document.getElementById('myImage60').style
+
+}
+
+if (myHitOther('myImage60','myImage56')){
+
+                   document.getElementById('myImage60').style.top = 
+          parseInt(document.getElementById('myImage60').style.top) - 680 + 'px'
+
+}
+
+if (myHitOther('myImage59','myImage56')){
+
+                   document.getElementById('myImage59').style.top = 
+          parseInt(document.getElementById('myImage59').style.top) - 680 + 'px'
+
+}
+
+if (myHitOther('myImage58','myImage56')){
+
+                   document.getElementById('myImage58').style.top = 
+          parseInt(document.getElementById('myImage58').style.top) - 680 + 'px'
+
+}
+
+
+if (myHitOther('myImage01','myImage54')){
+
+     location = 'https://scaredycatr.github.io/game-dev-2018-Shaferr/You%20win%20Screen.html'
+
+}
+
+if (myHitOther('myImage01','myImage55')){
+
+                   document.getElementById('myImage01').style.left = 
+          parseInt(document.getElementById('myImage01').style.left) - 19 + 'px'
+
+}
+
+if (myEvent.keyCode == 38){ document.getElementById('myImage01').style.top = 
+       parseInt(document.getElementById('myImage01').style.top) - 15 + 'px'
+          document.getElementById('myImage01').style.transform= 'rotate(90deg)'  
+}  //up arrow = 38
+
+if (myEvent.keyCode == 37){ document.getElementById('myImage01').style.left = 
+      parseInt(document.getElementById('myImage01').style.left)  - 15 + 'px' 
+          document.getElementById('myImage01').style.transform= 'rotate(0deg)'
+}  // left arrow= 37
+
+if (myEvent.keyCode == 40){ document.getElementById('myImage01').style.top = 
+    parseInt(document.getElementById('myImage01').style.top) + 15 + 'px' 
+          document.getElementById('myImage01').style.transform= 'rotate(-90deg)'
+}  //down arrow 40
+     
+if (myEvent.keyCode == 39){ document.getElementById('myImage01').style.left = 
+    parseInt(document.getElementById('myImage01').style.left) + 15 + 'px'
+       document.getElementById('myImage01').style.transform= 'rotateY(180deg)'
+}  //right arrow= 39
+
+if (myEvent.keyCode == 87){ document.getElementById('myImage02')
+}  //w = 87
+
+if (myEvent.keyCode == 65){ document.getElementById('myImage02')
+}  //a = 65
+
+if (myEvent.keyCode == 83){ document.getElementById('myImage02')
+}  //s = 83
+
+if (myEvent.keyCode == 68){ document.getElementById('myImage02')
+}  //d = 68
+
+}
+
+</script>
+
+Score: <input id="myScore" type=text value=1><br>
+
+
+
+<div id="myDiv01">...</div>
+
+          <img id="myImage01" width=40 src="https://i.pinimg.com/originals/d8/bc/a3/d8bca3a863609bffc8630c9892d3a600.png" 
+          style="position:absolute; width:90px; height:100px; left:160px; top:350px">
+
+          <img id="myImage02" width=70 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:80px; height:40px;  left:650px; top:80px">
+
+          <img id="myImage03" width=40 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:80px; height:40px; left:350px; top:-25000px">
+
+          <img id="myImage04" width=70 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:80px; height:40px;  left:50px; top:-25000px">
+
+          <img id="myImage05" width=70 src="https://xdiffautoparts.com/image/catalog/gear.gif" 
+          style="position:absolute; width:320px; height:350px;  left:-2px; top:-25200px">
+
+          <img id="myImage06" width=70 src="https://xdiffautoparts.com/image/catalog/gear.gif" 
+          style="position:absolute; width:320px; height:350px;  left:460px; top:-25200px">
+
+          <img id="myImage07" width=70 src="https://xdiffautoparts.com/image/catalog/gear.gif" 
+          style="position:absolute; width:320px; height:350px;  left:700px; top:-25400px">
+
+          <img id="myImage08" width=70 src="https://xdiffautoparts.com/image/catalog/gear.gif" 
+          style="position:absolute; width:320px; height:100px;  left:-310px; top:-500px">
+
+          <img id="myImage09" width=70 src="https://xdiffautoparts.com/image/catalog/gear.gif" 
+          style="position:absolute; width:320px; height:350px;  left:700px; top:-25400px">
+
+          <img id="myImage10" width=70 src="https://pngimage.net/wp-content/uploads/2018/06/redline-png-.png" 
+          style="position:absolute; width:1800px; height:50px;  left:-200px; top:-25400px">
+
+          <img id="myImage11" width=70 src="https://pngimage.net/wp-content/uploads/2018/06/straight-vertical-line-png-8.png" 
+          style="position:absolute; width:200px; height:800px;  left:100px; top:-25400px">
+
+          <img id="myImage12" width=70 src="output-onlinepngtools.png" 
+          style="position:absolute; width:320px; height:350px;  left:200px; top:-25400px">
+
+          <img id="myImage13" width=70 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:100px; height:50px;  left:400px; top:-25400px">
+
+          <img id="myImage14" width=70 src="output-onlinepngtools (1).png" 
+          style="position:absolute; width:300px; height:350px;  left:590px; top:-25400px">
+
+          <img id="myImage15" width=70 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:100px; height:50px;  left:690px; top:-24970px">
+
+          <img id="myImage16" width=70 src="output-onlinepngtools (2).png" 
+          style="position:absolute; width:300px; height:350px;  left:1000px; top:-25420px">
+
+          <img id="myImage17" width=70 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:100px; height:50px;  left:1020px; top:-24970px">
+
+          <img id="myImage18" width=70 src="output-onlinepngtools (3).png" 
+          style="position:absolute; width:300px; height:400px;  left:1300px; top:-25400px">
+
+          <img id="myImage19" width=70 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:100px; height:50px;  left:1400px; top:-25410px">
+
+          <img id="myImage20" width=70 src="http://www.handymanworks.com/images/production-photos/fotolia-6497363-xs-nobackground-250x424.png" 
+          style="position:absolute; width:230px; height:350px;  left:90px; top:-25100px">
+
+          <img id="myImage21" width=70 src="https://www.picpng.com/images/large/metal-nail-photo-png-34112" 
+          style="position:absolute; width:60px; height:40px;  left:1000px; top:-25110px">
+
+          <img id="myImage22" width=70 src="https://www.aaa.my/wp-content/uploads/2017/12/AAA-Fix-It-Handyman.png" 
+          style="position:absolute; width:240px; height:350px;  left:1300px; top:-25110px">
+
+          <img id="myImage23" width=70 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:80px; height:40px;  left:1200px; top:-24900px">
+
+          <img id="myImage24" width=70 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:80px; height:40px;  left:750px; top:-25100px"
+
+          <img id="myImage25" width=70 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:80px; height:40px;  left:1500px; top:-25050px">
+
+          <img id="myImage26" width=70 src="https://i2.wp.com/www.clarosoftware.com/help/wp-content/uploads/cropped-blank.png?fit=940%2C200&ssl=1" 
+          style="position:absolute; width:1200px; height:900px;  left:250px; top:-25110px">
+
+          <img id="myImage27" width=70 src="https://www.picpng.com/images/large/metal-nail-photo-png-34112" 
+          style="position:absolute; width:60px; height:40px;  left:1100px; top:-25110px">
+
+          <img id="myImage28" width=70 src="https://www.picpng.com/images/large/metal-nail-photo-png-34112" 
+          style="position:absolute; width:60px; height:40px;  left:900px; top:-25110px">
+
+          <img id="myImage29" width=70 src="https://www.picpng.com/images/large/metal-nail-photo-png-34112" 
+          style="position:absolute; width:60px; height:40px;  left:510px; top:-25110px">
+
+          <img id="myImage30" width=70 src="https://www.picpng.com/images/large/metal-nail-photo-png-34112" 
+          style="position:absolute; width:60px; height:40px;  left:610px; top:-25110px">
+
+          <img id="myImage31" width=70 src="https://www.picpng.com/images/large/metal-nail-photo-png-34112" 
+          style="position:absolute; width:60px; height:40px;  left:410px; top:-25110px">
+
+          <img id="myImage32" width=70 src="https://www.safetynetsnz.co.nz/files/cache/2ea38206dd8dfa3de6732d52794bafe8_f68.png" 
+          style="position:absolute; width:350px; height:120px;  left:1050px; top:-25320px">
+
+          <img id="myImage34" width=70 src="https://www.safetynetsnz.co.nz/files/cache/2ea38206dd8dfa3de6732d52794bafe8_f68.png" 
+          style="position:absolute; width:350px; height:120px;  left:550px; top:-25320px">
+
+          <img id="myImage36" width=70 src="https://www.safetynetsnz.co.nz/files/cache/2ea38206dd8dfa3de6732d52794bafe8_f68.png" 
+          style="position:absolute; width:350px; height:120px;  left:50px; top:-25320px">
+ 
+          <img id="myImage37" width=70 src="https://thumbs.gfycat.com/EverlastingShortAlaskankleekai-max-1mb.gif" 
+          style="position:absolute; width:140px; height:120px;  left:1050px; top:-25700px">
+
+          <img id="myImage39" width=70 src="https://thumbs.gfycat.com/EverlastingShortAlaskankleekai-max-1mb.gif" 
+          style="position:absolute; width:140px; height:120px;  left:550px; top:-25500px">
+
+          <img id="myImage41" width=70 src="https://thumbs.gfycat.com/EverlastingShortAlaskankleekai-max-1mb.gif" 
+          style="position:absolute; width:140px; height:120px;  left:50px; top:-25200px">
+
+          <img id="myImage42" width=70 src="https://i2.wp.com/www.clarosoftware.com/help/wp-content/uploads/cropped-blank.png?fit=940%2C200&ssl=1" 
+          style="position:absolute; width:1300px; height:400px;  left:100px; top:-25110px">
+
+          <img id="myImage43" width=70 src="https://pngimage.net/wp-content/uploads/2018/06/redline-png-.png" 
+          style="position:absolute; width:1800px; height:50px;  left:-200px; top:-24700px">
+
+          <img id="myImage44" width=70 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:80px; height:40px;  left:-100px; top:-24700px">
+
+          <img id="myImage45" width=70 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:80px; height:40px;  left:100px; top:-25000px">
+
+          <img id="myImage46" width=70 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:80px; height:40px;  left:500px; top:-25000px">
+
+          <img id="myImage47" width=70 src="http://www.clker.com/cliparts/J/b/u/w/Q/r/cartoon-bone-hi.png" 
+          style="position:absolute; width:80px; height:40px;  left:1000px; top:-25000px">
+
+          <img id="myImage51" width=70 src="https://cdn.dribbble.com/users/448511/screenshots/4277999/gameover03.gif" 
+          style="position:absolute; width:700px; height:600px;  left:450px; top:-25300px">
+
+          <img id="myImage53" width=70 src="https://img.icons8.com/ios/1600/horizontal-line.png" 
+          style="position:absolute; width:1700px; height:50px;  left:130px; top:-25250px">
+
+          <img id="myImage54" width=70 src="http://damache.com.ng/wp-content/uploads/2017/12/fireexit-doors-02.png" 
+          style="position:absolute; width:200px; height:300px;  left:1100px; top:-25250px">
+
+          <img id="myImage55" width=70 src="https://static.thenounproject.com/png/656404-200.png" 
+          style="position:absolute; width:150px; height:900px;  left:1400px; top:-25450px">
+
+          <img id="myImage56" width=70 src="https://img.icons8.com/ios/1600/horizontal-line.png" 
+          style="position:absolute; width:1750px; height:50px;  left:-20px; top:-25250px">
+
+          <img id="myImage57" width=70 src="https://img.icons8.com/ios/1600/horizontal-line.png" 
+          style="position:absolute; width:1800px; height:50px;  left:-50px; top:-25250px">
+
+          <img id="myImage58" width=70 src="https://xdiffautoparts.com/image/catalog/gear.gif" 
+          style="position:absolute; width:120px; height:100px;  left:800px; top:-25300px">
+
+          <img id="myImage59" width=70 src="https://xdiffautoparts.com/image/catalog/gear.gif" 
+          style="position:absolute; width:120px; height:100px;  left:500px; top:-25000px">
+
+          <img id="myImage60" width=70 src="https://xdiffautoparts.com/image/catalog/gear.gif" 
+          style="position:absolute; width:120px; height:100px;  left:200px; top:-25150px">
+
+          <img id="myImage61" width=70 src="https://i2.wp.com/www.clarosoftware.com/help/wp-content/uploads/cropped-blank.png?fit=940%2C200&ssl=1" 
+          style="position:absolute; width:1300px; height:600px;  left:0px; top:-25250px">
+
+</body>

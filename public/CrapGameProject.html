@@ -2,6 +2,9 @@
 background-size: 90%" background="ROADEZ.png">
 
 <script>
+   let myGlobalX = 0
+   let myClock
+   let myClock1
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
@@ -34,7 +37,7 @@ src="donkeykogng.jpg">
 if (event.key == 'w'){
    document.getElementById('myImg01').style.top =
       parseInt(document.getElementById('myImg01').style.top) - 90
-      if (myHitOther('myImg01','myImg02')){
+      if ( myHitOther('myImg01','myImg02')){
         alert()
    }
 

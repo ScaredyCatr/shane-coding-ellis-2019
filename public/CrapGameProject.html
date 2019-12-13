@@ -34,9 +34,9 @@ src="donkeykogng.jpg">
 if (event.key == 'w'){
    document.getElementById('myImg01').style.top =
       parseInt(document.getElementById('myImg01').style.top) - 90
-      if ( myHitOther('myImg01','myImg02')){
-       document.getElementById('myImg01').style.left = 
-      parseInt(document.getElementById('myImg01').style.left)  + 200 + 'px' 
+      if (myHitOther('myImg01','myImg02')){
+       document.getElementById('myImg01').style.top += 
+      parseInt(document.getElementById('myImg01').style.left)  + 200
    }
 
 }
@@ -44,9 +44,9 @@ if (event.key == 'w'){
 if (event.key == 's'){
    document.getElementById('myImg01').style.top =
       parseInt(document.getElementById('myImg01').style.top) + 90
-      if (myHitOther('myImg01','myImg02')){
+      if (myHitOther('myImg01','myImg02')) {
        document.getElementById('myImg01').style.top = 
-      parseInt(document.getElementById('myImg01').style.top)  - 200 + 'px' 
+      parseInt(document.getElementById('myImg01').style.top)  - 200 
    }
 
 }

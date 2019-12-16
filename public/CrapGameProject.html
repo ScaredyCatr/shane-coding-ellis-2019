@@ -20,6 +20,12 @@ function myHitOther(my1,my2){
 
 }
 
+function myCheckHit(){
+   if ( myHitOther('myImage01', 'myImage02') ){
+        alert('you lose')
+   }
+}
+
 </script>
 
 <img id="myImg01" style="position:relative; width:170px; height: 170px; top:-20px; left:200px;" 
@@ -31,27 +37,9 @@ src="donkeykogng.jpg">
 
 <body onkeydown="{
 
-if (event.key == 'w'){
-   document.getElementById('myImg01').style.top =
-      parseInt(document.getElementById('myImg01').style.top) - 90
-
-}
-
-if (myHitOther('myImg01','myImg02')){
-    document.getElementById('myImg01').style.top += 
-      parseInt(document.getElementById('myImg01').style.top)  + 200
-   }
-
-}
-
 if (event.key == 's'){
    document.getElementById('myImg01').style.top =
-      parseInt(document.getElementById('myImg01').style.top) + 90
-      if (myHitOther('myImg01','myImg02')) {
-       document.getElementById('myImg01').style.top = 
-      parseInt(document.getElementById('myImg01').style.top)  - 200 
+      parseInt(document.getElementById('myImg01').style.top) + 10
    }
-
-}
 
 }">

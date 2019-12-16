@@ -34,9 +34,12 @@ src="donkeykogng.jpg">
 if (event.key == 'w'){
    document.getElementById('myImg01').style.top =
       parseInt(document.getElementById('myImg01').style.top) - 90
-      if (myHitOther('myImg01','myImg02')){
-       document.getElementById('myImg01').style.top += 
-      parseInt(document.getElementById('myImg01').style.left)  + 200
+
+}
+
+if (myHitOther('myImg01','myImg02')){
+    document.getElementById('myImg01').style.top += 
+      parseInt(document.getElementById('myImg01').style.top)  + 200
    }
 
 }

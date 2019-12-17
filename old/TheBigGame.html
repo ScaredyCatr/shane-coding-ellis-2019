@@ -1,11 +1,6 @@
 <script>
    let myInterval
 
-function rotate(){
-	let img=document.getElementById('myImg01');
-	img.setAttribute('style','transform:rotate(90deg)');
-}
-
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
@@ -23,10 +18,6 @@ function myHitOther(my1,my2){
    }
 }
  </script>  
-
-
-<body id="myBody" style="background-repeat:
-background-size: 90%" background="blackback.jpg">
 
 <body onkeydown="{
 
@@ -55,7 +46,6 @@ if (event.key == 'd'){
    if ( myHitOther('myImg01','myImg03-2') ){
       document.getElementById('myImg01').src='giphy.gif' 
       document.getElementById('myImg01').style.left = '348px'
-      rotate()
 }
     } ,5)
 
@@ -64,14 +54,14 @@ if (event.key == 'd'){
 
 
 
-
-<body>
+<body id="myBody" style="background-repeat:
+background-size: 90%" background="blackback.jpg">
      <img id="myImg01" width=40 src="giphy.gif" 
     style="position:absolute; width:40px; height:30px;  left:100px; top:100px">
     <img id="myImg02" hidden width=40 src="glow.png"
     style="position:absolute; width:40px; height:30px;  left:100px; top:100px">
     <img id="myImg03" width=40 src="poptart.png"
-    style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:50px; top:400px">
+    style=" position:absolute; width:200px; height:150px;  left:50px; top:400px">
     <img id="myImg03-2" width=40 src="poptart.png"
-    style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:350px; top:320px">
+    style=" position:absolute; width:200px; height:150px;  left:350px; top:320px">
 </body>

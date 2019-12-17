@@ -1,5 +1,22 @@
 <script>
    let myInterval
+
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
  </script>  
 
 
@@ -25,6 +42,10 @@ if (event.key == 's'){
    document.getElementById
    ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10
     document.getElementById('myImg01').src='glow.png'
+   if ( myHitOther('myImg01','myImg03') ){
+      document.getElementById('myImg01').src='giphy.gif' 
+      document.getElementById('myImg01').style.top = '395px'
+}
     } ,5)
 
    }

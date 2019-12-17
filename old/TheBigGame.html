@@ -1,6 +1,11 @@
 <script>
    let myInterval
 
+function rotate(){
+	let img=document.getElementById('myImg01');
+	img.setAttribute('style','transform:rotate(90deg)');
+}
+
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
@@ -50,6 +55,7 @@ if (event.key == 'd'){
    if ( myHitOther('myImg01','myImg03-2') ){
       document.getElementById('myImg01').src='giphy.gif' 
       document.getElementById('myImg01').style.left = '348px'
+      rotate()
 }
     } ,5)
 

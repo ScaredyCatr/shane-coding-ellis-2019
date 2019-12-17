@@ -1,3 +1,8 @@
+<script>
+   let myInterval
+ </script>  
+
+
 <body id="myBody" style="background-repeat:
 background-size: 90%" background="blackback.jpg">
 
@@ -11,7 +16,12 @@ background-size: 90%" background="blackback.jpg">
 <body onkeydown="{
 
 if (event.key == 's'){
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
    document.getElementById('myImg01').style.top =
-      parseInt(document.getElementById('myImg01').style.top) + 10
+    parseInt(document.getElementById('myImg01').style.top) + 10
+
+    } ,5)
+
    }
 }">

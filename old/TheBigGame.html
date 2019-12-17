@@ -23,18 +23,6 @@ function myHitOther(my1,my2){
 <body id="myBody" style="background-repeat:
 background-size: 90%" background="blackback.jpg">
 
-
-<body>
-     <img id="myImg01" width=40 src="giphy.gif" 
-    style="position:absolute; width:40px; height:30px;  left:100px; top:100px">
-    <img id="myImg02" hidden width=40 src="glow.png"
-    style="position:absolute; width:40px; height:30px;  left:100px; top:100px">
-    <img id="myImg03" width=40 src="poptart.png"
-    style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:50px; top:400px">
-    <img id="myImg03-2" width=40 src="poptart.png"
-    style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:350px; top:320px">
-</body>
-
 <body onkeydown="{
 
 if (event.key == 's'){
@@ -47,7 +35,6 @@ if (event.key == 's'){
    if ( myHitOther('myImg01','myImg03') ){
       document.getElementById('myImg01').src='giphy.gif' 
       document.getElementById('myImg01').style.top = '395px'
-      rotation: 90deg;
 }
     } ,5)
 
@@ -68,3 +55,17 @@ if (event.key == 'd'){
 
    }
 }">
+
+
+
+
+<body>
+     <img id="myImg01" width=40 src="giphy.gif" 
+    style="position:absolute; width:40px; height:30px;  left:100px; top:100px">
+    <img id="myImg02" hidden width=40 src="glow.png"
+    style="position:absolute; width:40px; height:30px;  left:100px; top:100px">
+    <img id="myImg03" width=40 src="poptart.png"
+    style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:50px; top:400px">
+    <img id="myImg03-2" width=40 src="poptart.png"
+    style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:350px; top:320px">
+</body>

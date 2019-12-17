@@ -33,6 +33,8 @@ background-size: 90%" background="blackback.jpg">
     style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:50px; top:400px">
     <img id="myImg03-1" width=40 src="poptart.png"
     style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:350px; top:320px">
+    <img id="myImg03-2" width=40 src="poptart.png"
+    style="position:absolute; width:200px; height:150px;  left:280px; top:100px">
 </body>
 
 <body onkeydown="{
@@ -47,8 +49,9 @@ if (event.key == 's'){
    if ( myHitOther('myImg01','myImg03') ){
       document.getElementById('myImg01').src='giphy.gif' 
       document.getElementById('myImg01').style.top = '395px'
+
 }
-    } ,5)
+    } ,1)
 
    }
 
@@ -63,7 +66,36 @@ if (event.key == 'd'){
       document.getElementById('myImg01').src='giphy.gif' 
       document.getElementById('myImg01').style.left = '348px'
 }
-    } ,5)
+    } ,1)
 
    }
+
+if (event.key == 'a'){
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+   document.getElementById
+   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10
+    document.getElementById('myImg01').src='glow.png'
+    } ,1)
+
+
+}
+
+if (event.key == 'w'){
+
+    clearInterval(myInterval)
+    myInterval = setInterval(function(){
+   document.getElementById
+   ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10
+    document.getElementById('myImg01').src='glow.png'
+      if ( myHitOther('myImg01','myImg03-2') ){
+      document.getElementById('myImg01').src='giphy.gif' 
+      document.getElementById('myImg01').style.top = '95px'
+}
+    } ,1)
+
+
+}
+
 }">

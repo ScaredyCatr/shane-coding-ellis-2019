@@ -20,7 +20,7 @@ function myHitOther(my1,my2){
  </script>  
 
 
-<body id="myBody" style="background-repeat:
+<body id="myBody" style="overflow: hidden; background-repeat:
 background-size: 90%" background="blackback.jpg">
 
 
@@ -35,9 +35,15 @@ background-size: 90%" background="blackback.jpg">
     style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:350px; top:320px">
     <img id="myImg03-2" width=40 src="poptart.png"
     style="position:absolute; width:200px; height:150px;  left:280px; top:100px">
+    <img id="myImg09" width=40 src="vines.png"
+    style="position:absolute; width:4000px; height:500px;  left:0spx; top:400px">
 </body>
 
 <body onkeydown="{
+
+if ( myHitOther('myImg01','myImg09') ){
+     location.reload()
+}
 
 if (event.key == 's'){
 

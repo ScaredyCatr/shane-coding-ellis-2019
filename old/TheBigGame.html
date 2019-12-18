@@ -41,10 +41,6 @@ background-size: 90%" background="blackback.jpg">
 
 <body onkeydown="{
 
-if ( myHitOther('myImg01','myImg09') ){
-     location.reload()
-}
-
 if (event.key == 's'){
 
     clearInterval(myInterval)
@@ -55,7 +51,9 @@ if (event.key == 's'){
    if ( myHitOther('myImg01','myImg03') ){
       document.getElementById('myImg01').src='giphy.gif' 
       document.getElementById('myImg01').style.top = '395px'
-
+    if ( myHitOther('myImg01','myImg09') ){
+     location.reload()
+    }
 }
     } ,1)
 

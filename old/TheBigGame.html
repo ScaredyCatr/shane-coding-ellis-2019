@@ -49,10 +49,8 @@ if (event.key == 's'){
    ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10
     document.getElementById('myImg01').src='glow.png'
    if ( myHitOther('myImg01','myImg03') ){
-      document.getElementById('myImg01').src='giphy.gif' 
-      document.getElementById('myImg01').style.top = '395px'}
-    if ( myHitOther('myImg01','myImg09') ){
-     document.getElementById('myImg01').src='splosion.gif' 
+    document.getElementById('myImg01').src='giphy.gif' 
+    clearInterval(myInterval)
     }
     
     } ,1)
@@ -72,7 +70,7 @@ if (event.key == 'd'){
 }
     } ,1)
 
-   }
+}
 
 if (event.key == 'a'){
 

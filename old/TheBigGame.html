@@ -18,20 +18,6 @@ function myHitOther(my1,my2){
    }
 }
 
-function disable()
-{
- document.onkeydown = function (e) 
- {
-  return false;
- }
-}
-function enable()
-{
- document.onkeydown = function (e) 
- {
-  return true;
- }
-}
  </script>  
 
 
@@ -57,7 +43,9 @@ background-size: 90%" background="blackback.jpg">
 <body onkeydown="{
 
 if (event.key == 's'){
-    
+    document.onkeydown = function (e) {
+        return false
+    }
     clearInterval(myInterval)
     myInterval = setInterval(function(){
    document.getElementById

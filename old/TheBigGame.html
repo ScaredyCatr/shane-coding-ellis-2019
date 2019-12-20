@@ -16,8 +16,18 @@ function myHitOther(my1,my2){
        return true
    }
 }
-function onKeyDown(event) {   
-  event.preventDefault();
+
+function disable() {
+ document.onkeydown = function (e) 
+ {
+  return false;
+ }
+}
+function enable() {
+ document.onkeydown = function (e) 
+ {
+  return true;
+ }
 }
  </script>  
 
@@ -43,12 +53,10 @@ background-size: 90%" background="blackback.jpg">
 
 <body onkeydown="{
 if (event.key == 's'){
-    document.onkeydown = function (e) {
-        return false
-    }
     clearInterval(myInterval)
     myInterval = setInterval(function(){
    document.getElementById
+
    ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10
     document.getElementById('myImg01').src='glow.png'
    if ( myHitOther('myImg01','myImg03') ){

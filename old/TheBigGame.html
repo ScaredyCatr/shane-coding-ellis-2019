@@ -17,20 +17,8 @@ function myHitOther(my1,my2){
    }
 }
 
-function disable() {
- document.onkeydown = function (e) 
- {
-  return false;
- }
-}
-function enable() {
- document.onkeydown = function (e) 
- {
-  return true;
- }
-}
  </script>  
-
+    
 
 <body id="myBody" style="overflow: hidden; background-repeat:
 background-size: 90%" background="blackback.jpg">
@@ -52,27 +40,38 @@ background-size: 90%" background="blackback.jpg">
 </body>
 
 <body onkeydown="{
+
 if (event.key == 's'){
+
     clearInterval(myInterval)
     myInterval = setInterval(function(){
    document.getElementById('myImg01').style.top = 
-   parseInt(document.getElementById('myImg01').style.top) + 10
+   parseInt(document.getElementById('myImg01').style.top) + 20
     document.getElementById('myImg01').src='glow.png'
+
    if ( myHitOther('myImg01','myImg03') ){
     document.getElementById('myImg01').src='giphy.gif' 
     clearInterval(myInterval)
     document.getElementById('myImg01').style.top = 
     parseInt(document.getElementById('myImg01').style.top) - 10 + 'px' 
-    }
+}
+   if ( myHitOther('myImg01','myImg03-2') ){
+    clearInterval(myInterval)
+    document.getElementById('myImg01').src='giphy.gif' 
+    document.getElementById('myImg01').style.left = 
+    parseInt(document.getElementById('myImg01').style.left) - 10 + 'px' 
+}
+
     
     } ,1)
 }
 
 if (event.key == 'd'){
+
     clearInterval(myInterval)
     myInterval = setInterval(function(){
    document.getElementById
-   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10
+   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 20
     document.getElementById('myImg01').src='glow.png'
    if ( myHitOther('myImg01','myImg03-1') ){
       document.getElementById('myImg01').src='giphy.gif' 
@@ -84,19 +83,21 @@ if (event.key == 'd'){
 }
 
 if (event.key == 'a'){
+
     clearInterval(myInterval)
     myInterval = setInterval(function(){
    document.getElementById
-   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10
+   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 20
     document.getElementById('myImg01').src='glow.png'
     } ,1)
 }
 
 if (event.key == 'w'){
+
     clearInterval(myInterval)
     myInterval = setInterval(function(){
    document.getElementById
-   ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10
+   ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 20
     document.getElementById('myImg01').src='glow.png'
       if ( myHitOther('myImg01','myImg03-2') ){
       document.getElementById('myImg01').src='giphy.gif' 
@@ -106,4 +107,5 @@ if (event.key == 'w'){
 }
     } ,1)
 }
+
 }">

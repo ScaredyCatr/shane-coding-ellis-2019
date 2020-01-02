@@ -55,14 +55,7 @@ if (event.key == 's'){
     document.getElementById('myImg01').style.top = 
     parseInt(document.getElementById('myImg01').style.top) - 10 + 'px' 
 }
-   if ( myHitOther('myImg01','myImg03-2') ){
-    clearInterval(myInterval)
-    document.getElementById('myImg01').src='giphy.gif' 
-    document.getElementById('myImg01').style.left = 
-    parseInt(document.getElementById('myImg01').style.left) - 10 + 'px' 
-}
-
-    
+ 
     } ,1)
 }
 
@@ -76,6 +69,12 @@ if (event.key == 'd'){
    if ( myHitOther('myImg01','myImg03-1') ){
       document.getElementById('myImg01').src='giphy.gif' 
      clearInterval(myInterval)
+    document.getElementById('myImg01').style.left = 
+    parseInt(document.getElementById('myImg01').style.left) - 10 + 'px' 
+}
+    if ( myHitOther('myImg01','myImg03-2') ){
+    clearInterval(myInterval)
+    document.getElementById('myImg01').src='giphy.gif' 
     document.getElementById('myImg01').style.left = 
     parseInt(document.getElementById('myImg01').style.left) - 10 + 'px' 
 }

@@ -26,15 +26,17 @@ background-size: 90%" background="blackback.jpg">
 
 <body>
      <img id="myImg01" width=40 src="New Piskel.gif" 
-    style="position:absolute; width:40px; height:30px;  left:70px; top:170px">
+    style="position:absolute; width:40px; height:30px;  left:70px; top:300px">
     <img id="myImg02" hidden width=40 src="glow.png"
     style="position:absolute; width:40px; height:30px;  left:100px; top:100px">
     <img id="myImg03" width=40 src="poptart.png"
-    style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:20px; top:180px">
+    style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:20px; top:310px">
     <img id="myImg03-1" width=40 src="poptart.png"
-    style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:350px; top:320px">
+    style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:180px; top:-30px">
     <img id="myImg03-2" width=40 src="poptart.png"
-    style="position:absolute; width:200px; height:150px;  left:280px; top:100px">
+    style="position:absolute; width:200px; height:150px;  left:280px; top:230px">
+    <img id="myImg03-4" width=40 src="poptart.png"
+    style="position:absolute; width:200px; height:150px;  left:50px; top:30px">
     <img id="myImg09" width=40 src="vines.png"
     style="position:absolute; width:4000px; height:500px;  left:0spx; top:400px">
 </body>
@@ -52,9 +54,10 @@ if (event.key == 's'){
    document.getElementById
    ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10
     document.getElementById('myImg01').src='glow.png'
-   if ( myHitOther('myImg01','myImg03') ){
+   if ( myHitOther('myImg01','myImg03') ){ 
       document.getElementById('myImg01').src='New Piskel.gif' 
-      document.getElementById('myImg01').style.top = '170px'
+      document.getElementById('myImg01').style.top = '300px'
+      
 
 }
     } ,1)
@@ -68,14 +71,11 @@ if (event.key == 'd'){
    document.getElementById
    ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10
     document.getElementById('myImg01').src='glow.png'
-   if ( myHitOther('myImg01','myImg03-1') ){
-      document.getElementById('myImg01').src='New Piskel.gif' 
-      document.getElementById('myImg01').style.left = '348px'
-   }
+
     if ( myHitOther('myImg01','myImg03-2') ){
       document.getElementById('myImg01').style.transform= 'rotate(-90deg)' 
       document.getElementById('myImg01').src='New Piskel.gif' 
-      document.getElementById('myImg01').style.left = '300px'
+      document.getElementById('myImg01').style.left = '290px'
       
 }
     } ,1)
@@ -89,6 +89,11 @@ if (event.key == 'a'){
    document.getElementById
    ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10
     document.getElementById('myImg01').src='glow.png'
+      if ( myHitOther('myImg01','myImg03-4') ){
+      document.getElementById('myImg01').style.transform= 'rotate(90deg)' 
+      document.getElementById('myImg01').src='New Piskel.gif' 
+      document.getElementById('myImg01').style.left = '200px'
+}
     } ,1)
 
 
@@ -101,9 +106,11 @@ if (event.key == 'w'){
    document.getElementById
    ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10
     document.getElementById('myImg01').src='glow.png'
-      if ( myHitOther('myImg01','myImg03-2') ){
+
+      if ( myHitOther('myImg01','myImg03-1') ){
+      document.getElementById('myImg01').style.transform= 'rotate(180deg)' 
       document.getElementById('myImg01').src='New Piskel.gif' 
-      document.getElementById('myImg01').style.top = '230px'
+      document.getElementById('myImg01').style.top = '100px'
 }
     } ,1)
 

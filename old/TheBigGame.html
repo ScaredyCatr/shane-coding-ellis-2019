@@ -1,5 +1,6 @@
 <script>
    let myInterval
+
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
@@ -16,17 +17,16 @@ function myHitOther(my1,my2){
        return true
    }
 }
-
  </script>  
-    
+
 
 <body id="myBody" style="overflow: hidden; background-repeat:
 background-size: 90%" background="blackback.jpg">
 
 
 <body>
-     <img id="myImg01" width=60 src="New Piskel.gif" 
-    style="position:absolute; width:40px; height:30px;  left:80px; top:170px">
+     <img id="myImg01" width=40 src="New Piskel.gif" 
+    style="position:absolute; width:40px; height:30px;  left:100px; top:100px">
     <img id="myImg02" hidden width=40 src="glow.png"
     style="position:absolute; width:40px; height:30px;  left:100px; top:100px">
     <img id="myImg03" width=40 src="poptart.png"
@@ -34,68 +34,58 @@ background-size: 90%" background="blackback.jpg">
     <img id="myImg03-1" width=40 src="poptart.png"
     style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:350px; top:320px">
     <img id="myImg03-2" width=40 src="poptart.png"
-    style="position:absolute; width:200px; height:150px;  left:30px; top:195px">
-    <img id="myImg03-3" width=40 src="poptart.png"
-    style="transform:rotate(90deg); position:absolute; width:200px; height:150px;  left:350px; top:320px">
+    style="position:absolute; width:200px; height:150px;  left:280px; top:100px">
+    <img id="myImg09" width=40 src="vines.png"
+    style="position:absolute; width:4000px; height:500px;  left:0spx; top:400px">
 </body>
 
 <body onkeydown="{
+
+if ( myHitOther('myImg01','myImg09') ){
+     location.reload()
+}
 
 if (event.key == 's'){
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
-   document.getElementById('myImg01').style.top = 
-   parseInt(document.getElementById('myImg01').style.top) + 20
+   document.getElementById
+   ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10
     document.getElementById('myImg01').src='glow.png'
-
    if ( myHitOther('myImg01','myImg03') ){
-    document.getElementById('myImg01').src='New Piskel.gif' 
-    clearInterval(myInterval)
-    document.getElementById('myImg01').style.top = 
-    parseInt(document.getElementById('myImg01').style.top) - 10 + 'px' 
-}
+      document.getElementById('myImg01').src='New Piskel.gif' 
+      document.getElementById('myImg01').style.top = '395px'
 
-   if ( myHitOther('myImg01','myImg03-3') ){
-    document.getElementById('myImg01').src='New Piskel.gif' 
-    clearInterval(myInterval)
-    document.getElementById('myImg01').style.top = 
-    parseInt(document.getElementById('myImg01').style.top) + 10 + 'px' 
 }
- 
-    } ,10)
-}
+    } ,1)
+
+   }
 
 if (event.key == 'd'){
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
    document.getElementById
-   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 20
+   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10
     document.getElementById('myImg01').src='glow.png'
    if ( myHitOther('myImg01','myImg03-1') ){
       document.getElementById('myImg01').src='New Piskel.gif' 
-     clearInterval(myInterval)
-    document.getElementById('myImg01').style.left = 
-    parseInt(document.getElementById('myImg01').style.left) - 10 + 'px' 
-}
-    if ( myHitOther('myImg01','myImg03-2') ){
-    clearInterval(myInterval)
-    document.getElementById('myImg01').src='New Piskel.gif' 
-    document.getElementById('myImg01').style.left = 
-    parseInt(document.getElementById('myImg01').style.left) - 10 + 'px' 
+      document.getElementById('myImg01').style.left = '348px'
 }
     } ,1)
-}
+
+   }
 
 if (event.key == 'a'){
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
    document.getElementById
-   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 20
+   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10
     document.getElementById('myImg01').src='glow.png'
     } ,1)
+
+
 }
 
 if (event.key == 'w'){
@@ -103,15 +93,15 @@ if (event.key == 'w'){
     clearInterval(myInterval)
     myInterval = setInterval(function(){
    document.getElementById
-   ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 20
+   ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10
     document.getElementById('myImg01').src='glow.png'
       if ( myHitOther('myImg01','myImg03-2') ){
       document.getElementById('myImg01').src='New Piskel.gif' 
-     clearInterval(myInterval)
-    document.getElementById('myImg01').style.top = 
-    parseInt(document.getElementById('myImg01').style.top) + 10 + 'px' 
+      document.getElementById('myImg01').style.top = '230px'
 }
     } ,1)
+
+
 }
 
 }">

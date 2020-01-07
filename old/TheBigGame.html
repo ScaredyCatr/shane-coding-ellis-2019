@@ -26,18 +26,20 @@ background-size: 90%" background="blackback.jpg">
 
 <body>
      <img id="myImg01" width=40 src="New Piskel.gif" 
-    style="position:absolute; width:40px; height:30px;  left:70px; top:300px">
+    style="position:absolute; width:40px; height:30px;  left:70px; top:360px">
     <img id="myImg02" hidden width=40 src="glow.png"
     style="position:absolute; width:40px; height:30px;  left:100px; top:100px">
     <img id="myImg03" width=40 src="box.gif"
     style="transform:rotate(360deg); position:absolute; width:200px; height:150px;  left:20px; top:400px">
     <img id="myImg03-1" width=40 src="box.gif"
-    style="transform:rotate(90deg); position:absolute; width:200px; height:200px;  left:180px; top:50px">
+    style="transform:rotate(90deg); position:absolute; width:200px; height:270px;  left:180px; top:20px">
     <img id="myImg03-2" width=40 src="box.gif"
     style="position:absolute; width:100px; height:150px;  left:325px; top:300px">
     <img id="myImg03-4" width=40 src="box.gif"
     style="position:absolute; width:200px; height:150px;  left:50px; top:30px">
     <img id="myImg09" width=40 src="vines.png"
+    style="position:absolute; width:4000px; height:500px;  left:0spx; top:400px">
+    <img id="myImg09-2" width=40 src="vines.png"
     style="position:absolute; width:4000px; height:500px;  left:0spx; top:400px">
 </body>
 
@@ -59,6 +61,11 @@ if (event.key == 's'){
       document.getElementById('myImg01').style.top = '372px'
       
 
+}
+      if ( myHitOther('myImg01','myImg03-1') ){
+      document.getElementById('myImg01').style.transform= 'rotate(180deg)' 
+      document.getElementById('myImg01').src='New Piskel.gif' 
+      document.getElementById('myImg01').style.top = '400px'
 }
     } ,1)
 
@@ -94,6 +101,13 @@ if (event.key == 'a'){
       document.getElementById('myImg01').src='New Piskel.gif' 
       document.getElementById('myImg01').style.left = '200px'
 }
+
+   if ( myHitOther('myImg01','myImg09-2') ){ 
+      document.getElementById('myImg01').src='New Piskel.gif' 
+      document.getElementById('myImg01').style.top = '-20px'
+      
+
+}
     } ,1)
 
 
@@ -110,7 +124,7 @@ if (event.key == 'w'){
       if ( myHitOther('myImg01','myImg03-1') ){
       document.getElementById('myImg01').style.transform= 'rotate(180deg)' 
       document.getElementById('myImg01').src='New Piskel.gif' 
-      document.getElementById('myImg01').style.top = '60px'
+      document.getElementById('myImg01').style.top = '260px'
 }
     } ,1)
 

@@ -48,6 +48,24 @@ document.getElementById('myImg01').style.top = '9000px'
 document.getElementById('myImg01').style.left = '70px'
 location.reload();
 }
+
+if ( myHitOther('myImg01','myImg10-5') ){
+document.getElementById('myImg01').style.top = '9000px'
+document.getElementById('myImg01').style.left = '70px'
+location.reload();
+}
+
+if ( myHitOther('myImg01','myImg10-6') ){
+document.getElementById('myImg01').style.top = '9000px'
+document.getElementById('myImg01').style.left = '70px'
+location.reload();
+}
+
+if ( myHitOther('myImg01','myImg10-7') ){
+document.getElementById('myImg01').style.top = '9000px'
+document.getElementById('myImg01').style.left = '70px'
+location.reload();
+}
 }
  </script>  
 
@@ -74,7 +92,11 @@ background-size: 90%" background="blackback.jpg">
     <img id="myImg03-4" width=40 src="box.gif"
     style="position:absolute; width:260px; height:130px;  left:150px; top:55px">
     <img id="myImg03-5" width=40 src="box.gif"
-    style="position:absolute; width:260px; height:220px;  left:850px; top-10px">
+    style="position:absolute; width:260px; height:220px;  left:650px; top:-80px">
+    <img id="myImg03-6" width=40 src="box.gif"
+    style="position:absolute; width:60px; height:90px;  left:650px; top:335px">
+    <img id="myImg03-7" width=40 src="box.gif"
+    style="position:absolute; width:60px; height:119px;  left:425px; top:351px">
     <img id="myImg09" width=40 src="Blue.jpg"
     style="position:absolute; width:40000px; height:10px;  left:0px; top:-100px">
     <img id="myImg09-2" width=40 src="Blue.jpg"
@@ -86,9 +108,17 @@ background-size: 90%" background="blackback.jpg">
     <img id="myImg10-2" width=40 src="Red.png"
     style="position:absolute; width:10px; height:400px;  left:150px; top:-30px">
     <img id="myImg10-3" width=40 src="Red.png"
-    style="position:absolute; width:10px; height:73px;  left:350px; top:282px">
+    style="position:absolute; width:10px; height:68px;  left:350px; top:284px">
     <img id="myImg10-4" width=40 src="Red.png"
     style="position:absolute; width:10px; height:753px;  left:350px; top:470px">
+    <img id="myImg10-5" width=40 src="Red.png"
+    style="position:absolute; width:180px; height:290px;  left:410px; top:60px">
+    <img id="myImg10-6" width=40 src="Red.png"
+    style="position:absolute; width:10px; height:200px;  left:670px; top:135px">
+    <img id="myImg10-7" width=40 src="Red.png"
+    style="position:absolute; width:150px; height:10px;  left:495px; top:430px">
+
+
 </body>
 
 <body onkeydown="{
@@ -142,7 +172,13 @@ if (event.key == 'd'){
       if ( myHitOther('myImg01','myImg03-5') ){
       document.getElementById('myImg01').style.transform= 'rotate(-90deg)' 
       document.getElementById('myImg01').src='New Piskel.gif' 
-      document.getElementById('myImg01').style.left = '100px'
+      document.getElementById('myImg01').style.left = '617px'
+}
+
+      if ( myHitOther('myImg01','myImg03-6') ){
+      document.getElementById('myImg01').style.transform= 'rotate(-90deg)' 
+      document.getElementById('myImg01').src='New Piskel.gif' 
+      document.getElementById('myImg01').style.left = '617px'
 }
     } ,1)
 
@@ -152,17 +188,21 @@ if (event.key == 'a'){
 
     clearInterval(myInterval)
     myInterval = setInterval(function(){
+   document.getElementById
+   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10
     document.getElementById('myImg01').src='glow.png'
     HitRed()
-      if ( myHitOther('myImg01','myImg03-4') ){
-      document.getElementById('myImg01').style.transform= 'rotate(90deg)' 
-      document.getElementById('myImg01').src='New Piskel.gif' 
-      document.getElementById('myImg01').style.left = '200px'
-}
 
    if ( myHitOther('myImg01','myImg09-2') ){ 
       document.getElementById('myImg01').src='New Piskel.gif' 
       document.getElementById('myImg01').style.top = '-20px'  
+      
+
+}
+
+   if ( myHitOther('myImg01','myImg03-7') ){ 
+      document.getElementById('myImg01').src='New Piskel.gif' 
+      document.getElementById('myImg01').style.left = '900px'  
       
 
 }

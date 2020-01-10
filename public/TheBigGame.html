@@ -76,13 +76,25 @@ document.getElementById('myImg13').style.top = '20px'
 
 if ( myHitOther('myImg13','myImg12') ){
 
+
+}
+if ( myHitOther('myImg01','myImg10-8') ){
+document.getElementById('myImg01').style.top = '9000px'
+document.getElementById('myImg01').style.left = '70px'
+location.reload();
+}
+
+if ( myHitOther('myImg01','myImg10-9') ){
+document.getElementById('myImg01').style.top = '9000px'
+document.getElementById('myImg01').style.left = '70px'
+location.reload();
 }
 }
  </script>  
 
 
 <body id="myBody" style="overflow: hidden; background-repeat:
-background-size: 90%" background="blackback.jpg">
+background-size: 90%" background="vanilla.png">
 
 
 <body>
@@ -92,8 +104,6 @@ background-size: 90%" background="blackback.jpg">
     style="position:absolute; width:40px; height:30px;  left:70px; top:-440px">
      <img id="myImg01" width=40 src="New Piskel.gif" 
     style="position:absolute; width:40px; height:30px;  left:70px; top:440px">
-    <img id="myImg02" hidden width=40 src="glow.png"
-    style="position:absolute; width:40px; height:30px;  left:100px; top:100px">
     <img id="myImg03" width=40 src="box.gif"
     style="transform:rotate(360deg); position:absolute; width:200px; height:150px;  left:20px; top:470px">
     <img id="myImg03-1" width=40 src="box.gif"
@@ -133,7 +143,7 @@ background-size: 90%" background="blackback.jpg">
     <img id="myImg10-8" width=40 src="Red.png"
     style="position:absolute; width:140px; height:10px;  left:350px; top:590px">
     <img id="myImg10-9" width=40 src="Red.png"
-    style="position:absolute; width:140px; height:10px;  left:650px; top:590px">
+    style="position:absolute; width:140px; height:10px;  left:700px; top:590px">
     <img id="myImg11" width=40 src="coinspin.gif"
     style="position:absolute; width:20px; height:30px;  left:495px; top:380px">
     <img id="myImg12" width=40 src="SageGray.jpg"
@@ -153,8 +163,7 @@ if (event.key == 's'){
     clearInterval(myInterval)
     myInterval = setInterval(function(){
    document.getElementById
-   ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10
-    document.getElementById('myImg01').src='glow.png'
+   ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 7
    HitRed()
 
    if ( myHitOther('myImg01','myImg03') ){ 
@@ -174,7 +183,7 @@ if (event.key == 's'){
 }
 
 
-    } ,1)
+    } ,5)
 
    }
 
@@ -183,8 +192,7 @@ if (event.key == 'd'){
     clearInterval(myInterval)
     myInterval = setInterval(function(){
    document.getElementById
-   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10
-    document.getElementById('myImg01').src='glow.png'
+   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 7
     HitRed()
     if ( myHitOther('myImg01','myImg03-2') ){
       document.getElementById('myImg01').style.transform= 'rotate(-90deg)' 
@@ -204,7 +212,7 @@ if (event.key == 'd'){
       document.getElementById('myImg01').src='New Piskel.gif' 
       document.getElementById('myImg01').style.left = '617px'
 }
-    } ,1)
+    } ,5)
 
    }
 
@@ -213,8 +221,7 @@ if (event.key == 'a'){
     clearInterval(myInterval)
     myInterval = setInterval(function(){
    document.getElementById
-   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10
-    document.getElementById('myImg01').src='glow.png'
+   ('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 7
     HitRed()
 
    if ( myHitOther('myImg01','myImg09-2') ){ 
@@ -231,7 +238,7 @@ if (event.key == 'a'){
       
 
 }
-    } ,1)
+    } ,5)
 
 
 }
@@ -241,8 +248,7 @@ if (event.key == 'w'){
     clearInterval(myInterval)
     myInterval = setInterval(function(){
    document.getElementById
-   ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10
-    document.getElementById('myImg01').src='glow.png'
+   ('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 7
    HitRed()
       if ( myHitOther('myImg01','myImg03-1') ){
       document.getElementById('myImg01').style.transform= 'rotate(180deg)' 
@@ -271,7 +277,7 @@ if (event.key == 'w'){
       document.getElementById('myImg01').style.transform= 'rotate(180deg)'
 }
 
-    } ,1)
+    } ,5)
 
 
 }

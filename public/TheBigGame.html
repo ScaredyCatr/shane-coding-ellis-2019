@@ -152,6 +152,8 @@ background-size: 90%" background="vanilla.png">
     style="position:absolute; width:20px; height:30px;  left:495px; top:380px">
     <img id="myImg14" width=40 src="navyblue.jpg"
     style="position:absolute; width:200px; height:30px;  left:495px; top:580px">
+    <img id="myImg15" width=40 src="game over.png"
+    style="position:absolute; width:400px; height:290px;  left:320px; top:-300px">
 
 </body>
 
@@ -267,6 +269,7 @@ if (event.key == 'w'){
         if ( myHitOther('myImg12','myImg13') ){
               if ( myHitOther('myImg01','myImg14') ){
                    document.getElementById('myImg14').style.top = '-1000px'
+                   document.getElementById('myImg13').style.top = '-1000px'
 
               }
 }

@@ -17,6 +17,7 @@ function myHitOther(my1,my2){
        return true
    }
 }
+
 function HitRed() {
 if ( myHitOther('myImg01','myImg10') ){
 document.getElementById('myImg01').style.top = '9000px'
@@ -89,6 +90,30 @@ document.getElementById('myImg01').style.top = '9000px'
 document.getElementById('myImg01').style.left = '70px'
 location.reload();
 }
+
+if ( myHitOther('myImg01','myImg10-10') ){
+document.getElementById('myImg01').style.top = '9000px'
+document.getElementById('myImg01').style.left = '70px'
+location.reload();
+}
+
+if ( myHitOther('myImg01','myImg10-11') ){
+document.getElementById('myImg01').style.top = '9000px'
+document.getElementById('myImg01').style.left = '70px'
+location.reload();
+}
+
+if ( myHitOther('myImg01','myImg10-12') ){
+document.getElementById('myImg01').style.top = '9000px'
+document.getElementById('myImg01').style.left = '70px'
+location.reload();
+}
+
+if ( myHitOther('myImg01','myImg10-13') ){
+document.getElementById('myImg01').style.top = '9000px'
+document.getElementById('myImg01').style.left = '70px'
+location.reload();
+}
 }
  </script>  
 
@@ -98,6 +123,8 @@ background-size: 90%" background="vanilla.png">
 
 
 <body>
+     <input type="button" value="Restart" onclick="location.reload()"
+      style="position:absolute; left:20px; top:60px">
      <img id="myImg-1" width=40 src="Red.png" 
     style="position:absolute; width:40px; height:30px;  left:200px; top:-440px">
     <img id="myImg-2" width=40 src="Red.png.gif" 
@@ -120,6 +147,8 @@ background-size: 90%" background="vanilla.png">
     style="position:absolute; width:60px; height:119px;  left:425px; top:351px">
     <img id="myImg03-8" width=40 src="box.gif"
     style="position:absolute; width:220px; height:45px;  left:490px; top:491px">
+    <img id="myImg03-9" width=40 src="box.gif"
+    style="position:absolute; width:60px; height:90px;  left:800px; top:500px">
     <img id="myImg09" width=40 src="Blue.jpg"
     style="position:absolute; width:40000px; height:10px;  left:0px; top:-100px">
     <img id="myImg09-2" width=40 src="Blue.jpg"
@@ -137,13 +166,21 @@ background-size: 90%" background="vanilla.png">
     <img id="myImg10-5" width=40 src="Red.png"
     style="position:absolute; width:180px; height:290px;  left:410px; top:60px">
     <img id="myImg10-6" width=40 src="Red.png"
-    style="position:absolute; width:10px; height:200px;  left:670px; top:135px">
+    style="position:absolute; width:50px; height:195px;  left:670px; top:140px">
     <img id="myImg10-7" width=40 src="Red.png"
-    style="position:absolute; width:150px; height:10px;  left:495px; top:430px">
+    style="position:absolute; width:230px; height:66px;  left:486px; top:425px">
     <img id="myImg10-8" width=40 src="Red.png"
     style="position:absolute; width:140px; height:10px;  left:350px; top:590px">
     <img id="myImg10-9" width=40 src="Red.png"
     style="position:absolute; width:140px; height:10px;  left:700px; top:590px">
+    <img id="myImg10-10" width=40 src="Red.png"
+    style="position:absolute; width:200px; height:200px;  left:19px; top:620px">
+    <img id="myImg10-11" width=40 src="Red.png"
+    style="position:absolute; width:10px; height:400px;  left:770px; top:600px">
+    <img id="myImg10-12" width=40 src="Red.png"
+    style="position:absolute; width:10px; height:68px;  left:350px; top:284px">
+    <img id="myImg10-13" width=40 src="Red.png"
+    style="position:absolute; width:10px; height:180px;  left:710px; top:335px">
     <img id="myImg11" width=40 src="coinspin.gif"
     style="position:absolute; width:20px; height:30px;  left:495px; top:380px">
     <img id="myImg12" width=40 src="SageGray.jpg"
@@ -154,6 +191,8 @@ background-size: 90%" background="vanilla.png">
     style="position:absolute; width:200px; height:30px;  left:495px; top:580px">
     <img id="myImg15" width=40 src="game over.png"
     style="position:absolute; width:400px; height:290px;  left:320px; top:-300px">
+    <img id="myImg03-10" width=40 src="box.gif"
+    style="position:absolute; width:20px; height:375px;  left:710px; top:140px">
 
 </body>
 
@@ -214,6 +253,12 @@ if (event.key == 'd'){
       document.getElementById('myImg01').src='New Piskel.gif' 
       document.getElementById('myImg01').style.left = '617px'
 }
+
+      if ( myHitOther('myImg01','myImg03-9') ){
+      document.getElementById('myImg01').style.transform= 'rotate(-90deg)' 
+      document.getElementById('myImg01').src='New Piskel.gif' 
+      document.getElementById('myImg01').style.left = '767px'
+}
     } ,5)
 
    }
@@ -240,6 +285,14 @@ if (event.key == 'a'){
       
 
 }
+
+   if ( myHitOther('myImg01','myImg03-10') ){ 
+      document.getElementById('myImg01').style.transform= 'rotate(90deg)' 
+      document.getElementById('myImg01').src='New Piskel.gif' 
+      document.getElementById('myImg01').style.left = '720px'  
+      
+
+}
     } ,5)
 
 
@@ -259,7 +312,7 @@ if (event.key == 'w'){
 }
 
       if ( myHitOther('myImg01','myImg09') ){
-      document.getElementById('myImg01').style.top = '600px'
+      document.getElementById('myImg01').style.top = '900px'
 }
 
       if ( myHitOther('myImg01','myImg14') ){
